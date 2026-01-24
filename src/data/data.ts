@@ -1,21 +1,28 @@
 export const data = {
-  name: "Your Name",
+  name: "Amitesh Singh",
   title: "Backend Developer",
   tagline:
     "I am a backend developer who loves working with motivated teams and building systems from first principles before scaling them.",
 
-  inspiration: {
-    name: "their_twitter_username",
-    url: "https://twitter.com/their_twitter_username",
-  },
+  inspirations: [
+    {
+      name: "sargampoudel",
+      url: "https://x.com/sargampoudel",
+    },
+    {
+      name: "kshvbgde",
+      url: "https://x.com/kshvbgde",
+    },
+  ],
+
   about:
     "I focus on building reliable, scalable backend systems. I value clarity over cleverness, and simplicity over complexity. When I'm not writing code, I'm probably reading about distributed systems or taking long walks.",
 
   socialLinks: {
-    github: "https://github.com",
-    twitter: "https://twitter.com",
-    linkedin: "https://linkedin.com",
-    email: "mailto:hello@example.com",
+    github: "https://github.com/devDesignAmitesh/",
+    twitter: "https://x.com/Amitesh48256",
+    linkedin: "https://www.linkedin.com/in/amitesh-singh-504b2b281/",
+    email: "mailto:amiteshsingh252@gmail.com",
   },
 
   resume: {
@@ -25,97 +32,119 @@ export const data = {
 
   blogs: [
     {
-      title: "Lean life",
-      slug: "lean-life",
-      date: "2026-01-18",
+      title: "Story behind this portfolio",
+      slug: "story-behind-this-portfolio",
+      date: "2026-01-24",
       readTime: "4 min read",
-      content: `TL;DR A lean life is doing less of the unnecessary, more of what matters, and owning your time and attention.
+      content: `# I Built This Portfolio Because Vibes
 
-## What is a lean life?
+TL;DR — I randomly decided to build a portfolio, used lovable.dev, fought with Next.js and Tailwind, and now you’re reading this because I needed content. Also: frontend is cute.
 
-In my words, it means cutting away the noise. It's about being intentional with your time, your energy, and your focus.
+## So… how did this even start?
 
-Most people fill their days with tasks that feel productive but don't move them forward. Meetings that could be emails. Emails that could be nothing. Projects that exist because someone was bored.
+I just got the idea of building my portfolio. No deep life moment. No dramatic trigger. Just vibes.
 
-A lean life rejects this. It asks: what actually matters?
+I truly love frontend, even though I mostly code backend, so please don’t expose me. I also wanted to try lovable.dev because why not. Vibe coding era, baby.
 
-## The practice
+Also, I recently bought a cutie little domain and it was sitting there doing absolutely nothing. That felt illegal.
 
-1. **Say no more often.** Every yes is a no to something else.
-2. **Own your calendar.** If you don't, someone else will.
-3. **Build systems, not goals.** Goals are destinations. Systems are the vehicle.
-4. **Protect deep work.** Shallow work expands to fill all available time.
+So yeah. Portfolio time.
 
-## Why it matters
+## The vibe I was going for
 
-Time is the only resource you can't get back. Spending it intentionally is the closest thing to freedom.`,
-    },
-    {
-      title: "Building systems that scale",
-      slug: "building-systems-that-scale",
-      date: "2026-01-10",
-      readTime: "6 min read",
-      content: `Scaling isn't about handling more load. It's about handling more load without proportionally more complexity.
+I had some references in mind. Very minimal. Very clean. Very “I drink black coffee”.
 
-## The misconception
+sarg.am and kela.com were the main ones. Simple, calm, and cool. Exactly my speed for a quick build.
 
-Many engineers think scaling means throwing more servers at a problem. Sometimes it does. But more often, it means designing systems that don't need to think too hard.
+Then I also looked at some fancy portfolios like ramx.in, dikshit.tech, rinkit.tech, pixperk.tech, and anshu.tech.
 
-## Principles I follow
+These are crazy good. But also clearly built with time, effort, and emotional stability.
 
-1. **Statelessness where possible.** State is where bugs hide.
-2. **Idempotency everywhere.** If something can fail, it will. Make retries safe.
-3. **Boring technology.** Proven tools beat shiny ones.
-4. **Measure before optimizing.** Intuition lies. Data doesn't.
+I want to build something like that too. But not today. Not in this economy. Not with my attention span.
 
-## The reality
+So I went with minimal. Easy to start. Easy to finish. Easy to vibe-code.
 
-Most systems don't need to scale. But the ones that do need it suddenly, and without warning. Build for that day, even if it never comes.`,
+## Enter lovable.dev and pain
+
+I opened ChatGPT. Trauma-dumped my entire idea. Got a prompt. Pasted it into lovable.dev.
+
+Boom. Instant UI. Dopamine hit. Life was good.
+
+Then I noticed something.
+
+Oh. This is Vite.
+
+I use Next.js. So now I’m converting everything. Which is a pain in the ass while vibe coding, by the way.
+
+I somehow finished that.
+
+Then I noticed another thing.
+
+Oh. This is old Tailwind.
+
+So now I’m upgrading Tailwind too. Which did not go smoothly.
+
+At this point I was too deep to quit. Classic sunk-cost fallacy moment.
+
+## And now we’re here
+
+Eventually, I built the whole thing.
+
+Now it’s time to add content.
+
+So for the sake of it, I’m writing this post and I’m going to publish it right after this.
+
+I’m writing this very raw. Very unfiltered. Very “this is literally what happened”.
+
+And yes, after this I’m going to ask GPT to structure it nicely for rendering beautifully.
+
+Which is exactly what I just did. Meta, I know.
+
+## Final thoughts aka emotional outro
+
+If you’re reading this, you are awesome. You have elite patience. You probably also overthink side projects.
+
+Also, please drop a comment on my Twitter post about my portfolio. I need validation. Thank you.
+
+TL;DR — Built a portfolio because vibes. Used lovable.dev. Fought Vite, Next.js, and Tailwind. Wrote this post for content. No regrets. Some regrets.`,
     },
   ],
 
   experience: [
     {
-      company: "Spotsnow",
-      role: "Software Engineer",
-      period: "Oct 2024 – Present",
+      company: "Macro Rides",
+      role: "Founding Engineer",
+      period: "Oct 2024 – Jan 2026",
       description:
-        "Working on backend systems that handle high-throughput data processing. Building APIs, optimizing database queries, and mentoring junior engineers.",
+        "Joined as a Founding Engineer and played a key role in building the product from the ground up, owning frontend, backend, and DevOps initiatives. Led technical hiring efforts, conducted interviews, and managed project timelines while implementing a modern, scalable technology stack.",
     },
     {
-      company: "TechStart",
-      role: "Backend Developer",
-      period: "Mar 2022 – Sep 2024",
+      company: "My Design Minds",
+      role: "Full Stack Developer",
+      period: "Apr 2025 – Nov 2025",
       description:
-        "Built the core payment infrastructure from scratch. Designed event-driven architecture for real-time notifications. Reduced API latency by 60%.",
-    },
-    {
-      company: "Freelance",
-      role: "Software Consultant",
-      period: "Jan 2020 – Feb 2022",
-      description:
-        "Helped startups build their MVPs. Focused on clean architecture and maintainable codebases. Worked with Python, Go, and PostgreSQL.",
+        "Built an AI-driven platform from the ground up, leading end-to-end development across frontend, backend, and DevOps. Managed and mentored a two-member engineering team while implementing a modern, scalable technology stack.",
     },
   ],
 
   projects: [
     {
-      name: "ratelimit",
+      name: "MacroRides — Web Platform (Landing Page + Vendor Portal)",
       description:
-        "A simple, Redis-backed rate limiter for distributed systems. Used in production by 3 companies.",
-      link: "https://github.com",
+        "Built both the public-facing landing page and the internal vendor management platform for MacroRides. Delivered a high-performance, SEO-optimized marketing site and engineered a production-grade vendor portal used by multiple vendors for daily operations. Took ownership of development, deployment, and scalability across both products.",
+      link: "https://macrorides.com/",
     },
     {
-      name: "pgmigrate",
+      name: "Multiplayer Brainstorming Platform (Excalidraw Clone)",
       description:
-        "Zero-downtime PostgreSQL migration tool. Handles schema changes without locking tables.",
-      link: "https://github.com",
+        "Built a collaborative whiteboarding platform inspired by Excalidraw, enabling teams to brainstorm visually and efficiently. Developed the complete frontend with a strong focus on performance, scalability, and user experience. Currently extending the platform with real-time collaboration using WebSockets and an event-driven backend.",
+      link: "https://excalidraw.baap.one/",
     },
     {
-      name: "logpipe",
+      name: "Multiplayer Draw & Guess Game (Skribbl.io Clone)",
       description:
-        "Lightweight log aggregation service. Collects, filters, and forwards logs to any destination.",
-      link: null,
+        "Developing an interactive multiplayer game where players draw prompts and compete by guessing words in real time. Implementing core gameplay mechanics, scoring logic, and a responsive UI using a modern, scalable frontend stack, with real-time state synchronization in progress.",
+      link: "https://github.com/DevDesignAmitesh/skribbl",
     },
   ],
 };
