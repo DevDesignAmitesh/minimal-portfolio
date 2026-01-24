@@ -7,11 +7,11 @@ export const data = {
   inspirations: [
     {
       name: "sargampoudel",
-      url: "https://x.com/sargampoudel",
+      url: "https://www.sarg.am/",
     },
     {
       name: "kshvbgde",
-      url: "https://x.com/kshvbgde",
+      url: "https://www.kshv.me/",
     },
   ],
 
@@ -54,7 +54,7 @@ So yeah. Portfolio time.
 
 I had some references in mind. Very minimal. Very clean. Very “I drink black coffee”.
 
-sarg.am and kela.com were the main ones. Simple, calm, and cool. Exactly my speed for a quick build.
+sarg.am and kshv.me were the main ones. Simple, calm, and cool. Exactly my speed for a quick build.
 
 Then I also looked at some fancy portfolios like ramx.in, dikshit.tech, rinkit.tech, pixperk.tech, and anshu.tech.
 
