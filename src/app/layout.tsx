@@ -20,19 +20,19 @@ export const metadata: Metadata = {
     template: "%s · Amitesh Singh",
   },
   description:
-    "Backend developer who builds systems from first principles and scales them with care. A calm personal notebook on the internet.",
+    "Full-stack developer who builds systems from first principles and scales them with care. A calm personal notebook on the internet.",
   metadataBase: new URL("https://baap.one"),
   openGraph: {
     title: "Amitesh Singh",
     description:
-      "Backend developer who builds systems from first principles and scales them with care.",
+      "Full-stack developer who builds thoughtful systems from first principles and scales them with care.",
     type: "website",
   },
   twitter: {
     card: "summary",
     title: "Amitesh Singh",
     description:
-      "Backend developer who builds systems from first principles and scales them with care.",
+      "Full-stack developer who builds thoughtful systems from first principles and scales them with care.",
   },
 };
 

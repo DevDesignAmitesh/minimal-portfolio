@@ -1,8 +1,12 @@
 export const data = {
   name: "Amitesh Singh",
-  title: "Backend Developer",
+  title: "Full-Stack Developer",
+
   tagline:
-    "I am a backend developer who loves working with motivated teams and building systems from first principles before scaling them.",
+    "I am a full-stack developer who loves working with motivated teams and building systems from first principles before scaling them.",
+
+  about:
+    "I focus on building reliable, scalable systems across the stack. I value clarity over cleverness, and simplicity over complexity. When I'm not writing code, I'm probably reading about distributed systems, thinking about product design, or taking long walks.",
 
   inspirations: [
     {
@@ -14,9 +18,6 @@ export const data = {
       url: "https://www.kshv.me/",
     },
   ],
-
-  about:
-    "I focus on building reliable, scalable backend systems. I value clarity over cleverness, and simplicity over complexity. When I'm not writing code, I'm probably reading about distributed systems or taking long walks.",
 
   socialLinks: {
     github: "https://github.com/devDesignAmitesh/",
