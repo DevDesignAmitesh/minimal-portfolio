@@ -144,8 +144,8 @@ TL;DR — Built a portfolio because vibes. Used lovable.dev. Fought Vite, Next.j
     {
       name: "Multiplayer Draw & Guess Game (Skribbl.io Clone)",
       description:
-        "Developing an interactive multiplayer game where players draw prompts and compete by guessing words in real time. Implementing core gameplay mechanics, scoring logic, and a responsive UI using a modern, scalable frontend stack, with real-time state synchronization in progress.",
-      link: "https://github.com/DevDesignAmitesh/skribbl",
+        "Developed an interactive multiplayer game where players draw prompts and compete by guessing words in real time. Implementing core gameplay mechanics, scoring logic, and a responsive UI using a modern, scalable frontend stack, with real-time state synchronization.",
+      link: "https://skribbl.baap.one/",
     },
   ],
 };
