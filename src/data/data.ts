@@ -139,13 +139,13 @@ TL;DR — Built a portfolio because vibes. Used lovable.dev. Fought Vite, Next.j
       name: "Multiplayer Brainstorming Platform (Excalidraw Clone)",
       description:
         "Built a collaborative whiteboarding platform inspired by Excalidraw, enabling teams to brainstorm visually and efficiently. Developed the complete frontend with a strong focus on performance, scalability, and user experience. Currently extending the platform with real-time collaboration using WebSockets and an event-driven backend.",
-      link: "https://excalidraw.baap.one/",
+      link: "https://excalidraw.amitesh.work/",
     },
     {
       name: "Multiplayer Draw & Guess Game (Skribbl.io Clone)",
       description:
         "Developed an interactive multiplayer game where players draw prompts and compete by guessing words in real time. Implementing core gameplay mechanics, scoring logic, and a responsive UI using a modern, scalable frontend stack, with real-time state synchronization.",
-      link: "https://skribbl.baap.one/",
+      link: "https://skribbl.amitesh.work/",
     },
   ],
 };
