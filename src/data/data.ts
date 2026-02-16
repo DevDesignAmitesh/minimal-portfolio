@@ -130,6 +130,12 @@ TL;DR — Built a portfolio because vibes. Used lovable.dev. Fought Vite, Next.j
 
   projects: [
     {
+      name: "Multiplayer Draw & Guess Game (Skribbl.io Clone)",
+      description:
+        "Developed an interactive multiplayer game where players draw prompts and compete by guessing words in real time. Implementing core gameplay mechanics, scoring logic, and a responsive UI using a modern, scalable frontend stack, with real-time state synchronization.",
+      link: "https://notskribbl.xyz/",
+    },
+    {
       name: "MacroRides — Web Platform (Landing Page + Vendor Portal)",
       description:
         "Built both the public-facing landing page and the internal vendor management platform for MacroRides. Delivered a high-performance, SEO-optimized marketing site and engineered a production-grade vendor portal used by multiple vendors for daily operations. Took ownership of development, deployment, and scalability across both products.",
@@ -140,12 +146,6 @@ TL;DR — Built a portfolio because vibes. Used lovable.dev. Fought Vite, Next.j
       description:
         "Built a collaborative whiteboarding platform inspired by Excalidraw, enabling teams to brainstorm visually and efficiently. Developed the complete frontend with a strong focus on performance, scalability, and user experience. Currently extending the platform with real-time collaboration using WebSockets and an event-driven backend.",
       link: "https://excalidraw.amitesh.work/",
-    },
-    {
-      name: "Multiplayer Draw & Guess Game (Skribbl.io Clone)",
-      description:
-        "Developed an interactive multiplayer game where players draw prompts and compete by guessing words in real time. Implementing core gameplay mechanics, scoring logic, and a responsive UI using a modern, scalable frontend stack, with real-time state synchronization.",
-      link: "https://skribbl.amitesh.work/",
     },
   ],
 };
