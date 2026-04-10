@@ -1,8 +1,9 @@
 import { data } from "@/src/data/data";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import TechStackList from "../TechStackList";
 
 const About = () => {
-  const { name, title, tagline, about, socialLinks } = data;
+  const { name, title, tagline, about, socialLinks, techStack } = data;
 
   const socials = [
     { icon: Github, href: socialLinks.github, label: "GitHub" },
@@ -33,6 +34,11 @@ const About = () => {
             <Icon className="h-5 w-5" />
           </a>
         ))}
+      </div>
+
+      <div className="mt-8">
+        <p className="text-sm font-medium text-foreground mb-3">Tech Stack</p>
+        <TechStackList items={techStack} />
       </div>
     </section>
   );

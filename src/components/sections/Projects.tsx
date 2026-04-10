@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { data } from "@/src/data/data";
+import TechStackList from "../TechStackList";
 
 const Projects = () => {
   const { projects } = data;
@@ -29,6 +30,7 @@ const Projects = () => {
             <p className="text-muted-foreground leading-relaxed mt-1">
               {project.description}
             </p>
+            <TechStackList items={project.techStack} className="mt-4" />
           </article>
         ))}
       </div>
