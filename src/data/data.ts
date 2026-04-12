@@ -99,6 +99,27 @@ export const data = {
         "Canvas API",
       ],
     },
+    {
+      name: "DocQuery",
+      description:
+        "Built a PDF-chat RAG application that lets users upload documents and ask natural-language questions against their content. The app combines document parsing, vector search, and OpenAI-powered responses in a clean chat interface.",
+      link: "https://pdf-chat.amitesh.work/",
+      techStack: [
+        "Express",
+        "Bun",
+        "React",
+        "Tailwind CSS",
+        "Vector DB",
+        "OpenAI",
+      ],
+    },
+    {
+      name: "Sphere Events",
+      description:
+        "Built the frontend for an event booking platform with polished interactions, responsive layouts, and motion-driven sections designed to make event discovery and booking feel smooth and modern.",
+      link: "https://sphere-site.vercel.app/",
+      techStack: ["Next.js", "Tailwind CSS", "Motion"],
+    },
   ],
 };
 
