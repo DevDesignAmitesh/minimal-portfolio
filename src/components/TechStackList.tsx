@@ -11,7 +11,7 @@ const TechStackList = ({ items, className = "" }: TechStackListProps) => {
       {items.map((item) => (
         <span
           key={item}
-          className="rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-foreground"
+          className="rounded-full border border-transparent px-3 py-1 text-xs font-medium text-foreground/80 ring-1 ring-border/40"
         >
           {item}
         </span>

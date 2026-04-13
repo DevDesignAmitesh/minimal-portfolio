@@ -1,39 +1,43 @@
-import { ArrowUpRight } from "lucide-react";
-import { data } from "@/src/data/data";
-import TechStackList from "../TechStackList";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { allProjects, featuredProjects } from "@/src/data/projects";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
-  const { projects } = data;
-
-  if (projects.length === 0) return null;
+  const pathname = usePathname();
+  const isProjectsPage = pathname === "/projects";
+  const showViewAllProjects = pathname !== "/projects";
+  const projects = isProjectsPage ? allProjects : featuredProjects;
 
   return (
-    <section className="py-12">
-      <h2 className="text-2xl font-medium text-foreground mb-8">Projects</h2>
-      <div className="space-y-6">
-        {projects.map((project, index) => (
-          <article key={index}>
-            <div className="flex items-start gap-2">
-              <h3 className="text-foreground font-medium">{project.name}</h3>
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 shrink-0"
-                  aria-label={`View ${project.name}`}
-                >
-                  <ArrowUpRight className="h-4 w-4" />
-                </a>
-              )}
-            </div>
-            <p className="text-muted-foreground leading-relaxed mt-1">
-              {project.description}
-            </p>
-            <TechStackList items={project.techStack} className="mt-4" />
-          </article>
+    <section id="projects" className="py-12 md:py-16">
+      <div className="max-w-3xl">
+        <h2 className="text-2xl font-medium text-foreground md:text-3xl">
+          Projects
+        </h2>
+        <p className="mt-2 text-sm text-muted-foreground md:text-base">
+          Selected work focused on real-time systems and backend architecture
+        </p>
+      </div>
+
+      <div className="mt-8 space-y-4">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
         ))}
       </div>
+
+      {showViewAllProjects ? (
+        <div className="mt-8">
+          <Link
+            href="/projects"
+            className="inline-flex w-full text-center items-center justify-center rounded-full border border-transparent px-5 py-2.5 text-sm font-medium text-foreground/80"
+          >
+            View All Projects
+          </Link>
+        </div>
+      ) : null}
     </section>
   );
 };
