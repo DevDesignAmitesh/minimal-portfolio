@@ -17,9 +17,6 @@ const Projects = () => {
         <h2 className="text-2xl font-medium text-foreground md:text-3xl">
           Projects
         </h2>
-        <p className="mt-2 text-sm text-muted-foreground md:text-base">
-          Selected work focused on real-time systems and backend architecture
-        </p>
       </div>
 
       <div className="mt-8 space-y-4">
