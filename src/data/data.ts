@@ -13,6 +13,8 @@ export const data = {
     twitter: "https://x.com/Amitesh48256",
     linkedin: "https://www.linkedin.com/in/amitesh-singh-504b2b281/",
     email: "mailto:amiteshsingh252@gmail.com",
+    medium: "https://medium.com/@amiteshsingh252/",
+    instagram: "https://www.instagram.com/ami_tes_hsi_ngh/",
   },
 
   techStack: [

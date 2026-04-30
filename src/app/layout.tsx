@@ -21,18 +21,27 @@ export const metadata: Metadata = {
   },
   description:
     "Full-stack developer who builds systems from first principles and scales them with care. A calm personal notebook on the internet.",
-  metadataBase: new URL("https://baap.one"),
+  metadataBase: new URL("https://amitesh.work/"),
   openGraph: {
     title: "Amitesh Singh",
     description:
       "Full-stack developer who builds thoughtful systems from first principles and scales them with care.",
     type: "website",
+    images: [
+      {
+        url: "/card.png",
+        width: 1012,
+        height: 524,
+        alt: "Amitesh Singh portfolio preview",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Amitesh Singh",
     description:
       "Full-stack developer who builds thoughtful systems from first principles and scales them with care.",
+    images: ["/card.png"],
   },
 };
 

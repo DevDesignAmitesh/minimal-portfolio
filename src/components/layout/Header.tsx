@@ -22,10 +22,10 @@ const Header = () => {
           className="text-sm font-medium text-foreground transition-colors duration-200 hover:text-muted-foreground"
           aria-label="Home"
         >
-          amitesh
+          me
         </Link>
 
-        <div className="flex items-center gap-4 text-sm">
+        <div className="flex items-center justify-center gap-4 text-sm">
           {navLinks.map((link) => (
             <Link
               key={link.href}

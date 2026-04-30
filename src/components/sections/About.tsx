@@ -1,7 +1,17 @@
 import { data } from "@/src/data/data";
+import { BookOpenText, Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 
 const About = () => {
-  const { name } = data;
+  const { name, socialLinks } = data;
+
+  const socials = [
+    { icon: Github, href: socialLinks.github, label: "GitHub" },
+    { icon: Twitter, href: socialLinks.twitter, label: "Twitter" },
+    { icon: Linkedin, href: socialLinks.linkedin, label: "LinkedIn" },
+    { icon: BookOpenText, href: socialLinks.medium, label: "Medium" },
+    { icon: Instagram, href: socialLinks.instagram, label: "Instagram" },
+    { icon: Mail, href: socialLinks.email, label: "Email" },
+  ];
 
   return (
     <section className="hero-reveal py-12 md:py-16">
@@ -19,6 +29,21 @@ const About = () => {
           deployment workflows with a focus on clarity, reliability, and
           practical engineering.
         </p>
+
+        <div className="mt-7 flex items-center gap-5">
+          {socials.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground transition-colors duration-200 hover:text-foreground"
+              aria-label={label}
+            >
+              <Icon className="h-5 w-5" />
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
