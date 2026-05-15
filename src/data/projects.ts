@@ -15,7 +15,7 @@ export const featuredProjects: PortfolioProject[] = [
       "Real-time multiplayer math game with sub-100ms synchronized gameplay using WebSockets and Redis.",
     techTags: ["WebSockets", "Redis", "Next.js", "PostgreSQL"],
     liveUrl: "https://games.amitesh.work/",
-    githubUrl: data.socialLinks.github,
+    githubUrl: "https://github.com/devDesignAmitesh/games",
   },
   {
     title: "DocQuery",
@@ -23,7 +23,7 @@ export const featuredProjects: PortfolioProject[] = [
       "RAG-based PDF chat system enabling natural language queries over documents using vector search and LLMs.",
     techTags: ["RAG", "Vector DB", "OpenAI", "React"],
     liveUrl: "https://pdf-chat.amitesh.work/",
-    githubUrl: data.socialLinks.github,
+    githubUrl: "https://github.com/devDesignAmitesh/pdf-rag",
   },
   {
     title: "SketchSprint",
@@ -31,7 +31,7 @@ export const featuredProjects: PortfolioProject[] = [
       "Real-time multiplayer draw-and-guess game with synchronized gameplay and interactive canvas rendering.",
     techTags: ["WebSockets", "Canvas API", "Next.js"],
     liveUrl: "https://skribbl.amitesh.work/",
-    githubUrl: data.socialLinks.github,
+    githubUrl: "https://github.com/DevDesignAmitesh/skribbl",
   },
 ];
 
@@ -43,7 +43,7 @@ export const allProjects: PortfolioProject[] = [
       "Built the frontend for an event booking platform with polished interactions, responsive layouts, and motion-driven sections designed to make event discovery and booking feel smooth and modern.",
     techTags: ["Next.js", "Tailwind CSS", "Motion"],
     liveUrl: "https://sphere-site.vercel.app/",
-    githubUrl: data.socialLinks.github,
+    githubUrl: "https://github.com/DevDesignAmitesh/sphere-landing",
   },
   {
     title: "CanvasDraft",
@@ -57,6 +57,6 @@ export const allProjects: PortfolioProject[] = [
       "Canvas API",
     ],
     liveUrl: "https://excalidraw.amitesh.work/",
-    githubUrl: data.socialLinks.github,
+    githubUrl: "https://github.com/DevDesignAmitesh/excalidraw-clone-real",
   },
 ];
