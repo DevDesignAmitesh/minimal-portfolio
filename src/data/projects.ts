@@ -17,14 +17,14 @@ export const featuredProjects: PortfolioProject[] = [
     liveUrl: "https://games.amitesh.work/",
     githubUrl: "https://github.com/devDesignAmitesh/games",
   },
-  {
-    title: "DocQuery",
-    description:
-      "RAG-based PDF chat system enabling natural language queries over documents using vector search and LLMs.",
-    techTags: ["RAG", "Vector DB", "OpenAI", "React"],
-    liveUrl: "https://pdf-chat.amitesh.work/",
-    githubUrl: "https://github.com/devDesignAmitesh/pdf-rag",
-  },
+  // {
+  //   title: "DocQuery",
+  //   description:
+  //     "RAG-based PDF chat system enabling natural language queries over documents using vector search and LLMs.",
+  //   techTags: ["RAG", "Vector DB", "OpenAI", "React"],
+  //   liveUrl: "https://pdf-chat.amitesh.work/",
+  //   githubUrl: "https://github.com/devDesignAmitesh/pdf-rag",
+  // },
   {
     title: "SketchSprint",
     description:
