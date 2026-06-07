@@ -9,7 +9,6 @@ const About = () => {
     { icon: Twitter, href: socialLinks.twitter, label: "Twitter" },
     { icon: Linkedin, href: socialLinks.linkedin, label: "LinkedIn" },
     { icon: BookOpenText, href: socialLinks.medium, label: "Medium" },
-    { icon: Instagram, href: socialLinks.instagram, label: "Instagram" },
     { icon: Mail, href: socialLinks.email, label: "Email" },
   ];
 
