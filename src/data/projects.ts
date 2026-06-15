@@ -1,5 +1,3 @@
-import { data } from "./data";
-
 export interface PortfolioProject {
   title: string;
   description: string;
@@ -9,6 +7,14 @@ export interface PortfolioProject {
 }
 
 export const featuredProjects: PortfolioProject[] = [
+  {
+    title: "tui-typer",
+    description:
+      "Terminal typing race game for creating rooms, sharing codes, and competing with live multiplayer progress updates.",
+    techTags: ["TypeScript", "Ink", "WebSockets", "React"],
+    liveUrl: "https://typer.amitesh.work/",
+    githubUrl: "https://github.com/DevDesignAmitesh/tui-type-racing",
+  },
   {
     title: "QuickDuel",
     description:
@@ -37,26 +43,26 @@ export const featuredProjects: PortfolioProject[] = [
 
 export const allProjects: PortfolioProject[] = [
   ...featuredProjects,
-  // {
-  //   title: "Sphere Events",
-  //   description:
-  //     "Built the frontend for an event booking platform with polished interactions, responsive layouts, and motion-driven sections designed to make event discovery and booking feel smooth and modern.",
-  //   techTags: ["Next.js", "Tailwind CSS", "Motion"],
-  //   liveUrl: "https://sphere-site.vercel.app/",
-  //   githubUrl: "https://github.com/DevDesignAmitesh/sphere-landing",
-  // },
-  // {
-  //   title: "CanvasDraft",
-  //   description:
-  //     "Built the UI for a whiteboarding platform inspired by Excalidraw, focused on a clean drawing experience and responsive interactions. The project centers on frontend polish, layout, and canvas-based editing rather than multiplayer or backend collaboration features.",
-  //   techTags: [
-  //     "TypeScript",
-  //     "Bun",
-  //     "Next.js",
-  //     "Tailwind CSS",
-  //     "Canvas API",
-  //   ],
-  //   liveUrl: "https://excalidraw.amitesh.work/",
-  //   githubUrl: "https://github.com/DevDesignAmitesh/excalidraw-clone-real",
-  // },
+  {
+    title: "Sphere Events",
+    description:
+      "Built the frontend for an event booking platform with polished interactions, responsive layouts, and motion-driven sections designed to make event discovery and booking feel smooth and modern.",
+    techTags: ["Next.js", "Tailwind CSS", "Motion"],
+    liveUrl: "https://sphere-site.vercel.app/",
+    githubUrl: "https://github.com/DevDesignAmitesh/sphere-landing",
+  },
+  {
+    title: "CanvasDraft",
+    description:
+      "Built the UI for a whiteboarding platform inspired by Excalidraw, focused on a clean drawing experience and responsive interactions. The project centers on frontend polish, layout, and canvas-based editing rather than multiplayer or backend collaboration features.",
+    techTags: [
+      "TypeScript",
+      "Bun",
+      "Next.js",
+      "Tailwind CSS",
+      "Canvas API",
+    ],
+    liveUrl: "https://excalidraw.amitesh.work/",
+    githubUrl: "https://github.com/DevDesignAmitesh/excalidraw-clone-real",
+  },
 ];

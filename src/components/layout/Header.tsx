@@ -1,6 +1,6 @@
 "use client";
 
-import { Sun, Moon } from "lucide-react";
+import { Home, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ const Header = () => {
           className="text-sm font-medium text-foreground transition-colors duration-200 hover:text-muted-foreground"
           aria-label="Home"
         >
-          me
+          <Home className="h-4 w-4" />
         </Link>
 
         <div className="flex items-center justify-center gap-4 text-sm">

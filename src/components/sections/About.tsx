@@ -1,5 +1,5 @@
 import { data } from "@/src/data/data";
-import { BookOpenText, Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
+import { BookOpenText, Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const About = () => {
   const { name, socialLinks } = data;
