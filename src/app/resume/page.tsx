@@ -29,7 +29,7 @@ export default function Resume() {
         <div className="flex justify-center">
           <a
             href={resume.downloadUrl}
-            download
+            download="amitesh-singh-resume.pdf"
             className="inline-flex items-center gap-2 px-4 py-2 text-foreground hover:text-muted-foreground transition-colors duration-200"
           >
             <Download className="h-4 w-4" />

@@ -29,8 +29,8 @@ export const data = {
   ],
 
   resume: {
-    imageUrl: "/resume.jpg",
-    downloadUrl: "/resume.pdf",
+    imageUrl: "/amitesh.jpg",
+    downloadUrl: "/amitesh.pdf",
   },
 
   experience: [

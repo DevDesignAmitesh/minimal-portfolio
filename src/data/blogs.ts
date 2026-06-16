@@ -91,9 +91,6 @@ export const getMediumBlogs = async () => {
       }
 
       const blogs = parseMediumFeed(await response.text());
-
-      console.log("BLOGS");
-      console.log(blogs);
       
       if (blogs.length > 0) {
         return blogs;
