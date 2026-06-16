@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ImageIcon } from "lucide-react";
 import type { BlogPost } from "@/src/data/blogs";
 
 const BlogCard = ({
@@ -14,15 +13,19 @@ const BlogCard = ({
     <article className="group py-5 md:py-6">
       <div className="grid gap-5 md:grid-cols-[168px_1fr] md:items-start">
         <div className="aspect-[16/9] overflow-hidden rounded-md bg-muted md:aspect-[4/3]">
-          {imageUrl ? (
-            <Image
+          {imageUrl.includes("cdn") ? (
+            <img
               src={imageUrl}
               alt=""
               width={900}
               height={600}
               className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
             />
-          ) : null}
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-muted-foreground">
+              <ImageIcon className="h-8 w-8" aria-hidden="true" />
+            </div>
+          )}
         </div>
 
         <div className="min-w-0">
