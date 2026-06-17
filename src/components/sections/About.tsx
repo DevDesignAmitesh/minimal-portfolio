@@ -1,5 +1,6 @@
 import { data } from "@/src/data/data";
 import { BookOpenText, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Image from "next/image";
 
 const About = () => {
   const { name, socialLinks } = data;
@@ -15,6 +16,15 @@ const About = () => {
   return (
     <section className="hero-reveal py-12 md:py-16">
       <div className="max-w-3xl">
+        <Image
+          src="/profile.png"
+          alt={`${name} profile photo`}
+          width={160}
+          height={160}
+          priority
+          className="mb-6 h-32 w-32 rounded-full object-cover ring-1 ring-border sm:h-36 sm:w-36 md:h-40 md:w-40"
+        />
+
         <h1 className="text-3xl font-medium text-foreground md:text-4xl">
           {name}
         </h1>

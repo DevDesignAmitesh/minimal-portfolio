@@ -8,13 +8,6 @@ export default function Resume() {
 
   return (
     <div className="py-12">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors duration-200 mb-8"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        <span>Back</span>
-      </Link>
       <div className="space-y-6">
         <Image
           height={100}

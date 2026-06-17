@@ -7,9 +7,9 @@ export default function Page() {
   return (
     <>
       <About />
+      <Experience />
       <Blogs />
       <Projects />
-      <Experience />
     </>
   );
 }
