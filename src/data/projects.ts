@@ -8,15 +8,22 @@ export interface PortfolioProject {
 
 export const featuredProjects: PortfolioProject[] = [
   {
-    title: "tui-typer",
+    title: "Centralized Exchange",
     description:
-      "Terminal typing race game for creating rooms, sharing codes, and competing with live multiplayer progress updates.",
-    techTags: ["TypeScript", "Ink", "WebSockets", "React"],
-    liveUrl: "https://typer.amitesh.work/",
-    githubUrl: "https://github.com/DevDesignAmitesh/tui-type-racing",
+      "Real-time exchange platform featuring a price-time priority matching engine, live order books, trade execution, and market data streaming.",
+    techTags: [
+      "TypeScript",
+      "Next.js",
+      "PostgreSQL",
+      "Redis",
+      "WebSockets",
+      "Docker"
+    ],
+    liveUrl: "https://exchange.amitesh.work/",
+    githubUrl: "http://github.com/devDesignAmitesh/cex",
   },
   {
-    title: "QuickDuel",
+    title: "Multiplayer Maths Games",
     description:
       "Real-time multiplayer math game with sub-100ms synchronized gameplay using WebSockets and Redis.",
     techTags: ["WebSockets", "Redis", "Next.js", "PostgreSQL"],
@@ -32,7 +39,7 @@ export const featuredProjects: PortfolioProject[] = [
   //   githubUrl: "https://github.com/devDesignAmitesh/pdf-rag",
   // },
   {
-    title: "SketchSprint",
+    title: "Multiplayer Draw And Guess Game",
     description:
       "Real-time multiplayer draw-and-guess game with synchronized gameplay and interactive canvas rendering.",
     techTags: ["WebSockets", "Canvas API", "Next.js"],
@@ -44,7 +51,15 @@ export const featuredProjects: PortfolioProject[] = [
 export const allProjects: PortfolioProject[] = [
   ...featuredProjects,
   {
-    title: "Sphere Events",
+    title: "Terminal Based, Realtime Typing Game",
+    description:
+      "Terminal typing race game for creating rooms, sharing codes, and competing with live multiplayer progress updates.",
+    techTags: ["TypeScript", "Ink", "WebSockets", "React"],
+    liveUrl: "https://typer.amitesh.work/",
+    githubUrl: "https://github.com/DevDesignAmitesh/tui-type-racing",
+  },
+  {
+    title: "Event Booking Platform Landing Page",
     description:
       "Built the frontend for an event booking platform with polished interactions, responsive layouts, and motion-driven sections designed to make event discovery and booking feel smooth and modern.",
     techTags: ["Next.js", "Tailwind CSS", "Motion"],
@@ -52,7 +67,7 @@ export const allProjects: PortfolioProject[] = [
     githubUrl: "https://github.com/DevDesignAmitesh/sphere-landing",
   },
   {
-    title: "CanvasDraft",
+    title: "Drawing Canvas",
     description:
       "Built the UI for a whiteboarding platform inspired by Excalidraw, focused on a clean drawing experience and responsive interactions. The project centers on frontend polish, layout, and canvas-based editing rather than multiplayer or backend collaboration features.",
     techTags: [
