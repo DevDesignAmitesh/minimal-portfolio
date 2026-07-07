@@ -5,8 +5,8 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/blogs", label: "blogs" },
   { href: "/projects", label: "projects" },
+  { href: "/blogs", label: "blogs" },
   { href: "/resume", label: "resume" },
 ];
 
