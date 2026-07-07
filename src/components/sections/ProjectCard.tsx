@@ -7,6 +7,7 @@ interface ProjectCardProps {
   techTags: string[];
   liveUrl: string;
   githubUrl: string;
+  impact?: string;
 }
 
 const actionClassName =
@@ -18,6 +19,7 @@ const ProjectCard = ({
   techTags,
   liveUrl,
   githubUrl,
+  impact
 }: ProjectCardProps) => {
   return (
     <article className="group py-5 md:py-6">
@@ -27,6 +29,13 @@ const ProjectCard = ({
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
             {description}
           </p>
+
+          {/** Optional one-line impact statement (scale / outcome) */}
+          {impact ? (
+            <p className="mt-2 text-sm font-medium text-foreground/80">
+              {impact}
+            </p>
+          ) : null}
 
           <TechStackList items={techTags} className="mt-5" />
         </div>

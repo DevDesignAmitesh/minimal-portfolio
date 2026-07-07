@@ -4,6 +4,7 @@ export interface PortfolioProject {
   techTags: string[];
   liveUrl: string;
   githubUrl: string;
+  impact?: string;
 }
 
 export const featuredProjects: PortfolioProject[] = [
@@ -21,6 +22,8 @@ export const featuredProjects: PortfolioProject[] = [
     ],
     liveUrl: "https://exchange.amitesh.work/",
     githubUrl: "http://github.com/devDesignAmitesh/cex",
+    impact:
+      "Real-time matching and market streaming focused on low-latency order execution.",
   },
   {
     title: "Multiplayer Maths Games",
@@ -29,6 +32,7 @@ export const featuredProjects: PortfolioProject[] = [
     techTags: ["WebSockets", "Redis", "Next.js", "PostgreSQL"],
     liveUrl: "https://games.amitesh.work/",
     githubUrl: "https://github.com/devDesignAmitesh/games",
+    impact: "Low-latency synchronized gameplay with sub-100ms round-trip sync.",
   },
   // {
   //   title: "DocQuery",
@@ -45,6 +49,7 @@ export const featuredProjects: PortfolioProject[] = [
     techTags: ["WebSockets", "Canvas API", "Next.js"],
     liveUrl: "https://skribbl.amitesh.work/",
     githubUrl: "https://github.com/DevDesignAmitesh/skribbl",
+    impact: "Real-time synchronized gameplay with responsive canvas rendering.",
   },
 ];
 
@@ -57,6 +62,7 @@ export const allProjects: PortfolioProject[] = [
     techTags: ["TypeScript", "Ink", "WebSockets", "React"],
     liveUrl: "https://typer.amitesh.work/",
     githubUrl: "https://github.com/DevDesignAmitesh/tui-type-racing",
+    impact: "Lightweight terminal-first multiplayer experience with live room sync.",
   },
   {
     title: "Event Booking Platform Landing Page",
@@ -65,6 +71,7 @@ export const allProjects: PortfolioProject[] = [
     techTags: ["Next.js", "Tailwind CSS", "Motion"],
     liveUrl: "https://sphere-site.vercel.app/",
     githubUrl: "https://github.com/DevDesignAmitesh/sphere-landing",
+    impact: "High-quality, responsive marketing site focused on conversion and UX polish.",
   },
   {
     title: "Drawing Canvas",
@@ -79,5 +86,6 @@ export const allProjects: PortfolioProject[] = [
     ],
     liveUrl: "https://excalidraw.amitesh.work/",
     githubUrl: "https://github.com/DevDesignAmitesh/excalidraw-clone-real",
+    impact: "Canvas-focused UI delivering a clean, responsive drawing experience.",
   },
 ];

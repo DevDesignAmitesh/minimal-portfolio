@@ -46,7 +46,7 @@ export const data = {
       role: "Full Stack Developer",
       period: "Apr 2025 – Nov 2025",
       description:
-        "Built an AI-driven platform from the ground up, leading end-to-end development across frontend, backend, and DevOps. Managed and mentored a two-member engineering team while implementing a modern, scalable technology stack.",
+        "Built an AI-driven platform from the ground up, leading end-to-end development across frontend, backend, and DevOps. Managed and mentored a two-member engineering team while implementing a modern, scalable technology stack. (Part-time / contract role; concurrent with Macro Rides.)",
     },
   ],
 

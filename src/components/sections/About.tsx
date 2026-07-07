@@ -39,6 +39,10 @@ const About = () => {
           practical engineering.
         </p>
 
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg font-medium">
+          I build systems from first principles and scale them with care.
+        </p>
+
         <div className="mt-7 flex items-center gap-5">
           {socials.map(({ icon: Icon, href, label }) => (
             <a
