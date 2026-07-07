@@ -30,6 +30,7 @@ const Projects = () => {
           <Link
             href="/projects"
             className="inline-flex w-full text-center items-center justify-center rounded-full border border-transparent px-5 py-2.5 text-sm font-medium text-foreground/80"
+            aria-label="View all projects"
           >
             View All Projects
           </Link>

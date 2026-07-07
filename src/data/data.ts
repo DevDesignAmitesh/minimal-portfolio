@@ -29,7 +29,6 @@ export const data = {
   ],
 
   resume: {
-    imageUrl: "/amitesh.jpg",
     downloadUrl: "/amitesh.pdf",
   },
 
@@ -40,13 +39,23 @@ export const data = {
       period: "Oct 2024 – Mar 2026",
       description:
         "Joined as a Founding Engineer and played a key role in building the product from the ground up, owning frontend, backend, and DevOps initiatives. Led technical hiring efforts, conducted interviews, and managed project timelines while implementing a modern, scalable technology stack.",
+      highlights: [
+        "Hired and onboarded 2-3 engineers.",
+        "Reduced deploy time by 30 minutes to just one push.",
+        "Worked on reliability and scaling: 50-100 users.",
+      ],
     },
     {
       company: "My Design Minds",
       role: "Full Stack Developer",
       period: "Apr 2025 – Nov 2025",
       description:
-        "Built an AI-driven platform from the ground up, leading end-to-end development across frontend, backend, and DevOps. Managed and mentored a two-member engineering team while implementing a modern, scalable technology stack. (Part-time / contract role; concurrent with Macro Rides.)",
+        "Built an AI-driven platform from the ground up, leading end-to-end development across frontend, backend, and DevOps. Managed and mentored a two-member engineering team while implementing a modern, scalable technology stack. (Part-time / contract role, concurrent with Macro Rides.)",
+      highlights: [
+        "Mentored and managed a 2-person engineering team.",
+        "Delivered core MVP features and reduced time-to-market for the initial launch.",
+        "Implemented production-ready inference/AI flows.",
+      ],
     },
   ],
 

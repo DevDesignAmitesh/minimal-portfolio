@@ -21,6 +21,16 @@ const Experience = () => {
             <p className="text-muted-foreground leading-relaxed">
               {exp.description}
             </p>
+
+            {exp.highlights && exp.highlights.length > 0 ? (
+              <ul className="mt-3 list-disc pl-5 text-sm text-muted-foreground">
+                {exp.highlights.map((h, i) => (
+                  <li key={i} className="mb-1">
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </article>
         ))}
       </div>

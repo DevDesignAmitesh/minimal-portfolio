@@ -46,6 +46,7 @@ const ProjectCard = ({
             target="_blank"
             rel="noopener noreferrer"
             className={`${actionClassName} text-foreground hover:opacity-65`}
+            aria-label={`Open live demo for ${title}`}
           >
             <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
@@ -55,6 +56,7 @@ const ProjectCard = ({
             target="_blank"
             rel="noopener noreferrer"
             className={`${actionClassName} text-foreground/80 hover:text-foreground`}
+            aria-label={`Open source for ${title}`}
           >
             <Github className="h-3.5 w-3.5" />
           </a>
