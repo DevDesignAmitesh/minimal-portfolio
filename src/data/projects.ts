@@ -26,6 +26,16 @@ export const featuredProjects: PortfolioProject[] = [
       "Real-time matching and market streaming focused on low-latency order execution.",
   },
   {
+    title: "AI Agent CLI",
+    description:
+      "A CLI coding agent built from scratch, version by version — implementing a ReAct-style agent loop, tool calling (bash execution, planning, clarifying questions), human-in-the-loop approval gates for risky actions, persistent cross-session memory, context compaction/summarization, and E2B-sandboxed command execution.",
+    techTags: ["TypeScript", "Node.js", "Gemini API", "E2B"],
+    liveUrl: "https://github.com/DevDesignAmitesh/ai-agent-cli",
+    githubUrl: "https://github.com/DevDesignAmitesh/ai-agent-cli",
+    impact:
+      "Engineered a production-style agentic loop with guardrails, persistent memory, and sandboxed execution to safely run autonomous multi-step coding tasks.",
+  },
+  {
     title: "Multiplayer Maths Games",
     description:
       "Real-time multiplayer math game with sub-100ms synchronized gameplay using WebSockets and Redis.",
@@ -42,6 +52,10 @@ export const featuredProjects: PortfolioProject[] = [
   //   liveUrl: "https://pdf-chat.amitesh.work/",
   //   githubUrl: "https://github.com/devDesignAmitesh/pdf-rag",
   // },
+];
+
+export const allProjects: PortfolioProject[] = [
+  ...featuredProjects,
   {
     title: "Multiplayer Draw And Guess Game",
     description:
@@ -51,10 +65,6 @@ export const featuredProjects: PortfolioProject[] = [
     githubUrl: "https://github.com/DevDesignAmitesh/skribbl",
     impact: "Real-time synchronized gameplay with responsive canvas rendering.",
   },
-];
-
-export const allProjects: PortfolioProject[] = [
-  ...featuredProjects,
   {
     title: "Terminal Based, Realtime Typing Game",
     description:
