@@ -6,7 +6,7 @@ export const data = {
     "I am a full-stack developer who loves working with motivated teams and building systems from first principles before scaling them.",
 
   about:
-    "I focus on building reliable, scalable systems across the stack. I value clarity over cleverness, and simplicity over complexity. When I'm not writing code, I'm probably reading about distributed systems, thinking about product design, or taking long walks.",
+    "I focus on building reliable, scalable systems across the stack — real-time multiplayer platforms, a trading exchange, browser-based media tools, and autonomous LLM-powered agents. I value clarity over cleverness, and simplicity over complexity. When I'm not writing code, I'm probably reading about distributed systems, thinking about product design, or taking long walks.",
 
   socialLinks: {
     github: "https://github.com/devDesignAmitesh/",
@@ -26,6 +26,8 @@ export const data = {
     "Redis",
     "AWS",
     "Postgres",
+    "Playwright",
+    "Canvas API",
   ],
 
   resume: {
@@ -60,6 +62,37 @@ export const data = {
   ],
 
   projects: [
+    {
+      name: "Screensy",
+      description:
+        "Windows-friendly screen recorder that captures screen share, webcam, and a custom wallpaper background, compositing everything client-side with the Canvas API and MediaRecorder. Nothing is ever uploaded — the recording renders and downloads straight from the browser.",
+      link: "https://screensy.amitesh.work/",
+      techStack: [
+        "TypeScript",
+        "Bun",
+        "Next.js",
+        "Tailwind CSS",
+        "Canvas API",
+        "Express",
+        "PostgreSQL",
+        "Turborepo",
+      ],
+    },
+    {
+      name: "Browser Agent",
+      description:
+        "An LLM-powered agent that browses live websites to complete natural-language tasks — planning where to navigate, observing page content, and performing clicks, typing, and scrolling to get the job done. Built at AI Hackathon S30 3.0.",
+      link: "https://github.com/DevDesignAmitesh/contest-7",
+      techStack: [
+        "TypeScript",
+        "Bun",
+        "Playwright",
+        "OpenAI API",
+        "Next.js",
+        "Express",
+        "PostgreSQL",
+      ],
+    },
     {
       name: "QuickDuel",
       description:

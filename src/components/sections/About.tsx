@@ -30,13 +30,13 @@ const About = () => {
         </h1>
 
         <p className="mt-3 text-sm font-medium text-muted-foreground md:text-base">
-          Full-stack / Backend / DevOps
+          Full-stack / Backend / DevOps / Applied AI
         </p>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-          I build production-ready web applications, backend systems, and
-          deployment workflows with a focus on clarity, reliability, and
-          practical engineering.
+          I build production systems end to end - real-time platforms, a
+          trading exchange, browser-based media tools, and autonomous
+          AI agents - with a bias for clarity, speed, and shipping.
         </p>
         
         <div className="mt-7 flex items-center gap-5">

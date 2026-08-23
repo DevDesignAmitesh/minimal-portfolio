@@ -9,6 +9,26 @@ export interface PortfolioProject {
 
 export const featuredProjects: PortfolioProject[] = [
   {
+    title: "Browser-Based Screen Recorder",
+    description:
+      "Windows-friendly screen recorder that captures screen share, webcam, and a custom wallpaper background, compositing everything client-side with the Canvas API and MediaRecorder. Nothing is ever uploaded — the recording renders and downloads straight from the browser.",
+    techTags: ["TypeScript", "Next.js", "Canvas API", "Express", "PostgreSQL", "Turborepo"],
+    liveUrl: "https://screensy.amitesh.work/",
+    githubUrl: "https://github.com/DevDesignAmitesh/screen-recorder",
+    impact:
+      "Fully client-side video compositing (screen + face cam + wallpaper) with zero server-side video storage.",
+  },
+  {
+    title: "Autonomous Browser Agent",
+    description:
+      "An LLM-powered agent that browses live websites to complete natural-language tasks — planning where to navigate, observing page content, and performing clicks, typing, and scrolling to get the job done.",
+    techTags: ["TypeScript", "Playwright", "OpenAI API", "Bun", "Next.js", "Express"],
+    liveUrl: "https://github.com/DevDesignAmitesh/contest-7",
+    githubUrl: "https://github.com/DevDesignAmitesh/contest-7",
+    impact:
+      "Built at AI Hackathon S30 3.0 — combines LLM-driven planning with Playwright automation to complete multi-step tasks on real websites.",
+  },
+  {
     title: "Centralized Exchange",
     description:
       "Real-time exchange platform featuring a price-time priority matching engine, live order books, trade execution, and market data streaming.",
