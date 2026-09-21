@@ -83,7 +83,7 @@ export const getMediumBlogs = async () => {
   for (const feedUrl of mediumFeedUrls) {
     try {
       const response = await fetch(feedUrl, {
-        // next: { revalidate: 60 * 60 * 6 },
+        next: { revalidate: 60 * 60 * 6 },
       });
 
       if (!response.ok) {
