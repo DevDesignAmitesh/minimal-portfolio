@@ -10,34 +10,40 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 const description =
-  "Amitesh Singh: backend and real-time systems engineer in Delhi, India, exploring AI agents. Former founding engineer; built an exchange matching engine, real-time multiplayer games, and autonomous browser and coding agents.";
+  "Backend & real-time systems engineer in Delhi, exploring AI agents. Ex-founding engineer at Macro Rides; built an exchange matching engine, multiplayer games and AI agents.";
+
+const title = "Amitesh Singh · Backend & Real-time Systems Engineer";
+
+// Share preview: a screenshot of the bento homepage (1200x630). Retake it when the design changes.
+const ogImage = {
+  url: "/og.png",
+  width: 1200,
+  height: 630,
+  alt: "Amitesh Singh: backend and real-time systems engineer. Bento portfolio with projects, experience and blogs.",
+};
 
 export const metadata: Metadata = {
   title: {
-    default: "Amitesh Singh · Backend & Real-time Systems Engineer",
+    default: title,
     template: "%s · Amitesh Singh",
   },
   description,
   metadataBase: new URL("https://www.amitesh.work"),
   openGraph: {
-    title: "Amitesh Singh",
+    title,
     description,
     type: "website",
     url: "/",
-    images: [
-      {
-        url: "/card.png",
-        width: 1012,
-        height: 524,
-        alt: "Amitesh Singh portfolio preview",
-      },
-    ],
+    siteName: "Amitesh Singh",
+    locale: "en_IN",
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amitesh Singh",
+    title,
     description,
-    images: ["/card.png"],
+    creator: "@Amitesh48256",
+    images: [ogImage],
   },
 };
 
