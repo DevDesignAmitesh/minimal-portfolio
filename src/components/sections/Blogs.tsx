@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getMediumBlogs } from "@/src/data/blogs";
+import { getHomepageBlogs, getMediumBlogs } from "@/src/data/blogs";
 import BlogCard from "./BlogCard";
 
 interface BlogsProps {
@@ -8,10 +8,10 @@ interface BlogsProps {
 
 const Blogs = async ({ showAll = false }: BlogsProps) => {
   const allBlogs = await getMediumBlogs();
-  const blogs = showAll ? allBlogs : allBlogs.slice(0, 3);
+  const blogs = showAll ? allBlogs : getHomepageBlogs(allBlogs, 3);
 
   return (
-    <section id="blogs" className="py-12 md:py-16">
+    <section className="py-12 md:py-16">
       <div className="max-w-3xl">
         <h2 className="text-2xl font-medium text-foreground md:text-3xl">
           Blogs
@@ -34,9 +34,9 @@ const Blogs = async ({ showAll = false }: BlogsProps) => {
         <div className="mt-8">
           <Link
             href="/blogs"
-            className="inline-flex w-full items-center justify-center rounded-full border border-transparent px-5 py-2.5 text-center text-sm font-medium text-foreground/80 hover:text-foreground"
+            className="inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium text-foreground/80 ring-1 ring-border transition-colors hover:bg-muted hover:text-foreground"
           >
-            View All Blogs
+            View all posts
           </Link>
         </div>
       ) : null}

@@ -13,7 +13,7 @@ const BlogCard = ({
     <article className="group py-5 md:py-6">
       <div className="grid gap-5 md:grid-cols-[168px_1fr] md:items-start">
         <div className="aspect-[16/9] overflow-hidden rounded-md bg-muted md:aspect-[4/3]">
-          {imageUrl.includes("cdn") ? (
+          {imageUrl ? (
             <img
               src={imageUrl}
               alt=""
@@ -31,7 +31,14 @@ const BlogCard = ({
         <div className="min-w-0">
           <div className="flex items-start justify-between gap-4">
             <h3 className="text-lg font-medium leading-snug text-foreground">
-              {title}
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline-offset-4 hover:underline"
+              >
+                {title}
+              </a>
             </h3>
             <a
               href={url}

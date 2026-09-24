@@ -1,34 +1,20 @@
 export const data = {
   name: "Amitesh Singh",
-  title: "Full-Stack Developer",
-
-  tagline:
-    "I am a full-stack developer who loves working with motivated teams and building systems from first principles before scaling them.",
+  headline: "Backend & real-time systems engineer, exploring AI agents",
+  location: "Delhi, India",
+  availability: "Open to full-time roles · Remote or on-site",
 
   about:
-    "I focus on building reliable, scalable systems across the stack — real-time multiplayer platforms, a trading exchange, browser-based media tools, and autonomous LLM-powered agents. I value clarity over cleverness, and simplicity over complexity. When I'm not writing code, I'm probably reading about distributed systems, thinking about product design, or taking long walks.",
+    "I build exchanges, real-time multiplayer systems, and AI agents. Previously founding engineer at Macro Rides.",
+
+  email: "amiteshsingh252@gmail.com",
 
   socialLinks: {
-    github: "https://github.com/devDesignAmitesh/",
+    github: "https://github.com/DevDesignAmitesh",
     twitter: "https://x.com/Amitesh48256",
     linkedin: "https://www.linkedin.com/in/amitesh-singh-504b2b281/",
-    email: "mailto:amiteshsingh252@gmail.com",
-    medium: "https://medium.com/@amiteshsingh252/",
+    medium: "https://medium.com/@amiteshsingh252",
   },
-
-  techStack: [
-    "TypeScript",
-    "Bun",
-    "Next.js",
-    "Tailwind CSS",
-    "WebSockets",
-    "Docker",
-    "Redis",
-    "AWS",
-    "Postgres",
-    "Playwright",
-    "Canvas API",
-  ],
 
   resume: {
     downloadUrl: "/amitesh.pdf",
@@ -37,134 +23,32 @@ export const data = {
   experience: [
     {
       company: "Macro Rides",
+      companyUrl: "https://www.macrorides.in/",
       role: "Founding Full Stack Engineer",
       period: "Oct 2024 – Mar 2026",
       description:
-        "Joined as a Founding Engineer and played a key role in building the product from the ground up, owning frontend, backend, and DevOps initiatives. Led technical hiring efforts, conducted interviews, and managed project timelines while implementing a modern, scalable technology stack.",
+        "Zone-based EV ride platform in Delhi: doorstep e-rickshaw pickups from metro stations at fixed fares. I was the first engineer and owned the product end to end across frontend, backend, and DevOps.",
       highlights: [
-        "Hired and onboarded 2-3 engineers.",
-        "Reduced deploy time by 30 minutes to just one push.",
-        "Worked on reliability and scaling: 50-100 users.",
+        "Architected and shipped the platform from zero to production: product, backend services, and infrastructure.",
+        "Replaced a ~30-minute manual deploy with a one-push CI/CD pipeline.",
+        "Ran technical hiring end to end: designed interviews, evaluated candidates, and onboarded 2–3 engineers.",
+        "Owned production reliability and engineering timelines through the early-rider launch.",
       ],
     },
     {
       company: "My Design Minds",
-      role: "Full Stack Developer",
+      companyUrl: "",
+      role: "Full Stack Engineer (Contract, part-time)",
       period: "Apr 2025 – Nov 2025",
       description:
-        "Built an AI-driven platform from the ground up, leading end-to-end development across frontend, backend, and DevOps. Managed and mentored a two-member engineering team while implementing a modern, scalable technology stack. (Part-time / contract role, concurrent with Macro Rides.)",
+        "Delhi-based platform helping MSMEs streamline design and manufacturing. I built its AI-driven product from the ground up, alongside my role at Macro Rides.",
       highlights: [
-        "Mentored and managed a 2-person engineering team.",
-        "Delivered core MVP features and reduced time-to-market for the initial launch.",
-        "Implemented production-ready inference/AI flows.",
+        "Led end-to-end development across frontend, backend, and DevOps for the MVP.",
+        "Built the production AI inference flows that power the core product.",
+        "Managed and mentored a 2-person engineering team.",
       ],
-    },
-  ],
-
-  projects: [
-    {
-      name: "Screensy",
-      description:
-        "Windows-friendly screen recorder that captures screen share, webcam, and a custom wallpaper background, compositing everything client-side with the Canvas API and MediaRecorder. Nothing is ever uploaded — the recording renders and downloads straight from the browser.",
-      link: "https://screensy.amitesh.work/",
-      techStack: [
-        "TypeScript",
-        "Bun",
-        "Next.js",
-        "Tailwind CSS",
-        "Canvas API",
-        "Express",
-        "PostgreSQL",
-        "Turborepo",
-      ],
-    },
-    {
-      name: "Browser Agent",
-      description:
-        "An LLM-powered agent that browses live websites to complete natural-language tasks — planning where to navigate, observing page content, and performing clicks, typing, and scrolling to get the job done. Built at AI Hackathon S30 3.0.",
-      link: "https://github.com/DevDesignAmitesh/contest-7",
-      techStack: [
-        "TypeScript",
-        "Bun",
-        "Playwright",
-        "OpenAI API",
-        "Next.js",
-        "Express",
-        "PostgreSQL",
-      ],
-    },
-    {
-      name: "QuickDuel",
-      description:
-        "Built a realtime multiplayer maths game where two users can connect, send friend requests, and compete live in quick calculation rounds. Players race to solve as many problems as possible within one minute, with synchronized gameplay, scoring, and matchmaking across the platform.",
-      link: "https://games.amitesh.work/",
-      techStack: [
-        "TypeScript",
-        "Bun",
-        "Next.js",
-        "Tailwind CSS",
-        "WebSockets",
-        "Docker",
-        "Redis",
-        "AWS",
-        "Postgres",
-        "CI/CD",
-        "Nginx",
-      ],
-    },
-    {
-      name: "SketchSprint",
-      description:
-        "Developed an interactive multiplayer game where players draw prompts and compete by guessing words in real time. Implementing core gameplay mechanics, scoring logic, and a responsive UI using a modern, scalable frontend stack, with real-time state synchronization.",
-      link: "https://skribbl.amitesh.work/",
-      techStack: [
-        "TypeScript",
-        "Bun",
-        "Next.js",
-        "Tailwind CSS",
-        "WebSockets",
-        "Docker",
-        "AWS",
-        "CI/CD",
-        "Nginx",
-      ],
-    },
-    {
-      name: "CanvasDraft",
-      description:
-        "Built the UI for a whiteboarding platform inspired by Excalidraw, focused on a clean drawing experience and responsive interactions. The project centers on frontend polish, layout, and canvas-based editing rather than multiplayer or backend collaboration features.",
-      link: "https://excalidraw.amitesh.work/",
-      techStack: [
-        "TypeScript",
-        "Bun",
-        "Next.js",
-        "Tailwind CSS",
-        "Canvas API",
-      ],
-    },
-    {
-      name: "DocQuery",
-      description:
-        "Built a PDF-chat RAG application that lets users upload documents and ask natural-language questions against their content. The app combines document parsing, vector search, and OpenAI-powered responses in a clean chat interface.",
-      link: "https://pdf-chat.amitesh.work/",
-      techStack: [
-        "Express",
-        "Bun",
-        "React",
-        "Tailwind CSS",
-        "Vector DB",
-        "OpenAI",
-      ],
-    },
-    {
-      name: "Sphere Events",
-      description:
-        "Built the frontend for an event booking platform with polished interactions, responsive layouts, and motion-driven sections designed to make event discovery and booking feel smooth and modern.",
-      link: "https://sphere-site.vercel.app/",
-      techStack: ["Next.js", "Tailwind CSS", "Motion"],
     },
   ],
 };
 
 export type Experience = (typeof data.experience)[number];
-export type Project = (typeof data.projects)[number];

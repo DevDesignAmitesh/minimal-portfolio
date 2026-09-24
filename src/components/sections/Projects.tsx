@@ -1,38 +1,34 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { allProjects, featuredProjects } from "@/src/data/projects";
+import { getProjects } from "@/src/data/projects";
 import ProjectCard from "./ProjectCard";
 
-const Projects = () => {
-  const pathname = usePathname();
-  const isProjectsPage = pathname === "/projects";
-  const showViewAllProjects = pathname !== "/projects";
-  const projects = isProjectsPage ? allProjects : featuredProjects;
+interface ProjectsProps {
+  showAll?: boolean;
+}
+
+const Projects = async ({ showAll = false }: ProjectsProps) => {
+  const allProjects = await getProjects();
+  const projects = showAll ? allProjects : allProjects.slice(0, 3);
 
   return (
-    <section id="projects" className="py-12 md:py-16">
-      <div className="max-w-3xl">
-        <h2 className="text-2xl font-medium text-foreground md:text-3xl">
-          Projects
-        </h2>
-      </div>
+    <section className="py-12 md:py-16">
+      <h2 className="text-2xl font-medium text-foreground md:text-3xl">
+        Projects
+      </h2>
 
-      <div className="mt-8 space-y-4">
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
         {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
+          <ProjectCard key={project.repo} {...project} />
         ))}
       </div>
 
-      {showViewAllProjects ? (
+      {!showAll ? (
         <div className="mt-8">
           <Link
             href="/projects"
-            className="inline-flex w-full text-center items-center justify-center rounded-full border border-transparent px-5 py-2.5 text-sm font-medium text-foreground/80"
-            aria-label="View all projects"
+            className="inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium text-foreground/80 ring-1 ring-border transition-colors hover:bg-muted hover:text-foreground"
           >
-            View All Projects
+            View all projects
           </Link>
         </div>
       ) : null}

@@ -33,9 +33,12 @@ const getTagValue = (item: string, tag: string) => {
   return match ? decodeHtml(match[1]).trim() : "";
 };
 
+// Medium appends a tracking pixel to every post, so skip it when picking a cover image.
 const getFirstImage = (content: string) => {
-  const match = content.match(/<img[^>]+src=["']([^"']+)["']/i);
-  return match ? decodeHtml(match[1]) : "";
+  const sources = [...content.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)].map((match) =>
+    decodeHtml(match[1]),
+  );
+  return sources.find((src) => !src.includes("/_/stat")) ?? "";
 };
 
 const formatDate = (value: string) => {
@@ -72,7 +75,7 @@ const parseMediumFeed = (xml: string): BlogPost[] => {
         description: description ? `${description}${contentText.length > 170 ? "..." : ""}` : "",
         publishedAt: formatDate(getTagValue(item, "pubDate")),
         readTime: estimateReadTime(contentText),
-        url,
+        url: url.split("?")[0],
         imageUrl: getFirstImage(rawContent),
       };
     })
@@ -101,4 +104,18 @@ export const getMediumBlogs = async () => {
   }
 
   return [];
+};
+
+// Slugs (from the Medium URL) shown first on the homepage, in this order.
+export const pinnedBlogSlugs = [
+  "i-bought-a-metro-ticket-read-one-warning-and-spent-the-ride-thinking-about-distributed-systems",
+  "deploying-apps-on-vms-ec2s",
+];
+
+export const getHomepageBlogs = (blogs: BlogPost[], count: number) => {
+  const pinned = pinnedBlogSlugs
+    .map((slug) => blogs.find((blog) => blog.url.includes("/" + slug)))
+    .filter((blog): blog is BlogPost => Boolean(blog));
+
+  return [...pinned, ...blogs.filter((blog) => !pinned.includes(blog))].slice(0, count);
 };

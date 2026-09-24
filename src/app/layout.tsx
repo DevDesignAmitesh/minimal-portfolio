@@ -14,19 +14,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const description =
+  "Amitesh Singh: backend and real-time systems engineer in Delhi, India, exploring AI agents. Former founding engineer; built an exchange matching engine, real-time multiplayer games, and autonomous browser and coding agents.";
+
 export const metadata: Metadata = {
   title: {
-    default: "Amitesh Singh",
+    default: "Amitesh Singh · Backend & Real-time Systems Engineer",
     template: "%s · Amitesh Singh",
   },
-  description:
-    "Full-stack developer who builds systems from first principles and scales them with care. A calm personal notebook on the internet.",
-  metadataBase: new URL("https://amitesh.work/"),
+  description,
+  metadataBase: new URL("https://www.amitesh.work"),
   openGraph: {
     title: "Amitesh Singh",
-    description:
-      "Full-stack developer who builds thoughtful systems from first principles and scales them with care.",
+    description,
     type: "website",
+    url: "/",
     images: [
       {
         url: "/card.png",
@@ -39,8 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Amitesh Singh",
-    description:
-      "Full-stack developer who builds thoughtful systems from first principles and scales them with care.",
+    description,
     images: ["/card.png"],
   },
 };

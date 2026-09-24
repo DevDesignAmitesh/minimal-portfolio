@@ -1,0 +1,145 @@
+<!doctype html>
+<!--
+  Source for public/amitesh.pdf. Regenerate after editing:
+  "C:/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --no-pdf-header-footer \
+    --print-to-pdf=public/amitesh.pdf resume/resume.html
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Amitesh Singh - Resume</title>
+<style>
+  @page { size: A4; margin: 10mm 13mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 9.4pt;
+    line-height: 1.38;
+    color: #1a1a1a;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { text-align: center; margin-bottom: 8pt; }
+  h1 { font-size: 21pt; font-weight: 700; letter-spacing: -0.01em; }
+  .headline { font-size: 10.5pt; font-weight: 600; color: #333; margin-top: 1pt; }
+  .contact { margin-top: 4pt; color: #333; }
+  .contact a { text-decoration: underline; text-underline-offset: 1.5pt; }
+  .sep { color: #999; margin: 0 5pt; }
+  h2 {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1.2pt solid #222;
+    padding-bottom: 1.5pt;
+    margin: 9pt 0 5pt;
+  }
+  .entry { margin-bottom: 6pt; break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
+  .title { font-weight: 700; }
+  .meta { color: #444; white-space: nowrap; }
+  .sub { font-style: italic; color: #333; }
+  .stack { color: #444; font-style: italic; }
+  .links a { text-decoration: underline; text-underline-offset: 1.5pt; }
+  ul { margin: 2pt 0 0 13pt; }
+  li { margin-bottom: 1pt; }
+  .summary { color: #222; }
+  .skills div { margin-bottom: 1.5pt; }
+  .skills b { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Amitesh Singh</h1>
+  <div class="headline">Backend &amp; Real-time Systems Engineer · Exploring AI Agents</div>
+  <div class="contact">
+    Delhi, India<span class="sep">|</span><a href="mailto:amiteshsingh252@gmail.com">amiteshsingh252@gmail.com</a><span class="sep">|</span><a href="https://www.amitesh.work">amitesh.work</a><span class="sep">|</span><a href="https://github.com/DevDesignAmitesh">github.com/DevDesignAmitesh</a><span class="sep">|</span><a href="https://www.linkedin.com/in/amitesh-singh-504b2b281/">LinkedIn</a>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p class="summary">
+  Backend-focused engineer who builds production systems end to end: an exchange with an in-memory matching engine, real-time multiplayer games on raw WebSockets, and autonomous AI agents. Former founding engineer at an EV mobility startup, where I shipped the product, set up CI/CD, and hired the engineering team.
+</p>
+
+<h2>Experience</h2>
+
+<div class="entry">
+  <div class="row"><span class="title">Macro Rides <span class="meta" style="font-weight:400">· zone-based EV ride platform, Delhi</span></span><span class="meta">Oct 2024 – Mar 2026</span></div>
+  <div class="sub">Founding Full Stack Engineer</div>
+  <ul>
+    <li>First engineer; architected and shipped the platform from zero to production across frontend, backend, and DevOps.</li>
+    <li>Replaced a ~30-minute manual deploy with a one-push CI/CD pipeline.</li>
+    <li>Ran technical hiring end to end: designed interviews, evaluated candidates, and onboarded 2–3 engineers.</li>
+    <li>Owned production reliability and engineering timelines through the early-rider launch.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span class="title">My Design Minds <span class="meta" style="font-weight:400">· design &amp; manufacturing platform for MSMEs</span></span><span class="meta">Apr 2025 – Nov 2025</span></div>
+  <div class="sub">Full Stack Engineer (Contract, part-time)</div>
+  <ul>
+    <li>Built the AI-driven product from the ground up, leading frontend, backend, and DevOps for the MVP.</li>
+    <li>Built the production AI inference flows that power the core product.</li>
+    <li>Managed and mentored a 2-person engineering team.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="entry">
+  <div class="row"><span><span class="title">Centralized Exchange</span> <span class="stack">| TypeScript, Bun, Redis, PostgreSQL, WebSockets, Docker</span></span><span class="links"><a href="https://exchange.amitesh.work/">Live</a> | <a href="https://github.com/DevDesignAmitesh/cex">GitHub</a></span></div>
+  <ul>
+    <li>Built an exchange around an in-memory order-matching engine, decoupled from Postgres via Redis so matching never blocks on I/O.</li>
+    <li>Split into independently scalable services (HTTP API, engine, WebSocket server, DB worker) linked by Redis pub/sub.</li>
+    <li>Streamed live order books, prices, and candlestick charts to clients; deployed with Docker, Nginx, and GitHub Actions.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span><span class="title">QuickDuel</span> <span class="stack">| WebSockets, Redis, BullMQ, PostgreSQL, Next.js, AWS</span></span><span class="links"><a href="https://games.amitesh.work/">Live</a> | <a href="https://github.com/DevDesignAmitesh/quickduel">GitHub</a></span></div>
+  <ul>
+    <li>Real-time multiplayer maths game with server-authoritative state over WebSockets keeping both players in sync.</li>
+    <li>Queue-based matchmaking in Redis to avoid race conditions; BullMQ workers for match and result jobs.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span><span class="title">Browser Agent</span> <span class="stack">| TypeScript, Playwright, OpenAI API, Express, Prisma, Next.js</span></span><span class="links"><a href="https://github.com/DevDesignAmitesh/browser-agent">GitHub</a></span></div>
+  <ul>
+    <li>Autonomous agent that completes natural-language tasks on live websites with an observe → plan → act loop driving Chromium. Built at AI Hackathon S30 3.0.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span><span class="title">AI Agent CLI</span> <span class="stack">| TypeScript, Bun, OpenAI &amp; Gemini APIs, E2B</span></span><span class="links"><a href="https://github.com/DevDesignAmitesh/ai-agent-cli">GitHub</a></span></div>
+  <ul>
+    <li>Terminal coding agent (a mini Claude Code) with a ReAct loop, tool calling, human-in-the-loop approvals, and a sandbox.</li>
+    <li>Persistent cross-session memory, automatic context summarization, and pluggable model providers.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="row"><span><span class="title">tui-typer</span> <span class="stack">| TypeScript, React, Ink, WebSockets</span></span><span class="links"><a href="https://www.npmjs.com/package/tui-typer">npm</a> | <a href="https://github.com/DevDesignAmitesh/tui-typer">GitHub</a></span></div>
+  <ul>
+    <li>Multiplayer terminal typing race with real-time rooms; published on npm with 1,000+ downloads in the last year.</li>
+  </ul>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <div><b>Languages:</b> TypeScript, JavaScript, SQL</div>
+  <div><b>Backend &amp; Real-time:</b> Node.js, Bun, Express, WebSockets, Redis (queues, pub/sub), BullMQ, PostgreSQL, Prisma</div>
+  <div><b>AI:</b> LLM agents, tool calling, OpenAI &amp; Gemini APIs, Playwright browser automation, RAG, E2B sandboxes</div>
+  <div><b>DevOps:</b> Docker, AWS (EC2), Nginx, GitHub Actions CI/CD, Turborepo</div>
+  <div><b>Frontend:</b> React, Next.js, Tailwind CSS, Canvas API, Ink</div>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="row"><span><span class="title">100xSchool</span> · Super 30 (engineering cohort)</span><span class="meta">May 2026 – Present</span></div>
+  <div class="row"><span><span class="title">University of Delhi</span> · B.Com, School of Open Learning</span><span class="meta">2023 – 2026</span></div>
+</div>
+
+</body>
+</html>
