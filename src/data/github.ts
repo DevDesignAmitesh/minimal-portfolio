@@ -33,25 +33,8 @@ export const getRepoDescriptions = async (): Promise<Map<string, string>> => {
   }
 };
 
-export const getReadme = async (repo: string): Promise<string | null> => {
-  try {
-    const response = await fetch(
-      `https://raw.githubusercontent.com/${githubUser}/${repo}/HEAD/README.md`,
-      { next: { revalidate } },
-    );
-    return response.ok ? await response.text() : null;
-  } catch {
-    return null;
-  }
-};
-
 export const repoUrl = (repo: string) => `https://github.com/${githubUser}/${repo}`;
 
-// Relative links/images in a README point into the repo, so resolve them against it.
-export const repoBlobBase = (repo: string) => `${repoUrl(repo)}/blob/HEAD/`;
-export const repoRawBase = (repo: string) =>
-  `https://raw.githubusercontent.com/${githubUser}/${repo}/HEAD/`;
-
-// GitHub's auto-generated social card, used as a thumbnail when a project has no video poster.
+// GitHub's auto-generated social card, used as a thumbnail when a project has no screenshot.
 export const repoPreviewImage = (repo: string) =>
   `https://opengraph.githubassets.com/1/${githubUser}/${repo}`;

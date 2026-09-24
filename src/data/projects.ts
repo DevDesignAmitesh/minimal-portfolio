@@ -1,21 +1,23 @@
-import { getRepoDescriptions, repoUrl } from "./github";
+import { getRepoDescriptions, repoPreviewImage, repoUrl } from "./github";
 
-// Descriptions and project pages come from GitHub (repo description + README).
-// Only what GitHub doesn't know lives here. Order = display order; the homepage shows the first 3.
+// Descriptions come from GitHub (repo description); only what GitHub doesn't know lives here.
+// Order = display order. The first project is featured on its own card.
 export interface PortfolioProject {
-  repo: string; // GitHub repo name, also the URL slug: /projects/<repo>
+  repo: string; // GitHub repo name
   title: string;
   description: string; // fallback when the repo has no GitHub description
   techTags: string[];
   liveUrl?: string;
-  // A file in /public (".mp4" / ".webm") or an embed URL (YouTube, Loom, Google Drive "/preview").
+  // Screenshot in /public/projects/. Falls back to GitHub's generated repo preview.
+  image?: string;
+  // Optional ".mp4" / ".webm" in /public, played silently on the featured card.
   video?: string;
-  poster?: string;
 }
 
 export const projects: PortfolioProject[] = [
   {
     repo: "cex",
+    image: "/projects/cex.png",
     title: "Centralized Exchange",
     description:
       "Crypto exchange with an in-memory order-matching engine, Redis-based async architecture, and real-time WebSocket market data.",
@@ -28,10 +30,11 @@ export const projects: PortfolioProject[] = [
     description:
       "Autonomous AI agent that completes natural-language tasks on live websites: plans, observes the page, clicks, types and scrolls.",
     techTags: ["TypeScript", "Playwright", "OpenAI API", "Express", "PostgreSQL"],
-    video: "https://drive.google.com/file/d/1EU5WRId3RgwPABsvL_ipufQrlJtgI_yT/preview",
+    liveUrl: "https://drive.google.com/file/d/1EU5WRId3RgwPABsvL_ipufQrlJtgI_yT/view",
   },
   {
     repo: "quickduel",
+    image: "/projects/quickduel.png",
     title: "QuickDuel",
     description:
       "Real-time multiplayer maths game with Redis matchmaking, BullMQ workers, and server-authoritative WebSocket state.",
@@ -47,6 +50,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     repo: "screensy",
+    image: "/projects/screensy.png",
     title: "Screensy",
     description:
       "Browser-based screen recorder compositing screen, face cam and wallpaper client-side. Video is never uploaded.",
@@ -63,6 +67,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     repo: "sketchsprint",
+    image: "/projects/sketchsprint.png",
     title: "SketchSprint",
     description:
       "Real-time multiplayer draw-and-guess game built on raw WebSockets. No Socket.IO, no game framework.",
@@ -71,6 +76,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     repo: "canvasdraft",
+    image: "/projects/canvasdraft.png",
     title: "CanvasDraft",
     description: "Excalidraw-inspired whiteboard focused on a clean, responsive canvas editing experience.",
     techTags: ["TypeScript", "Next.js", "Canvas API"],
@@ -78,6 +84,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     repo: "sphere-landing",
+    image: "/projects/sphere-landing.png",
     title: "Sphere Events",
     description: "Motion-driven landing page for an event booking platform.",
     techTags: ["Next.js", "Tailwind CSS", "Motion"],
@@ -85,7 +92,7 @@ export const projects: PortfolioProject[] = [
   },
 ];
 
-export type ResolvedProject = PortfolioProject & { githubUrl: string };
+export type ResolvedProject = PortfolioProject & { githubUrl: string; image: string };
 
 export const getProjects = async (): Promise<ResolvedProject[]> => {
   const descriptions = await getRepoDescriptions();
@@ -94,8 +101,6 @@ export const getProjects = async (): Promise<ResolvedProject[]> => {
     ...project,
     description: descriptions.get(project.repo.toLowerCase()) ?? project.description,
     githubUrl: repoUrl(project.repo),
+    image: project.image ?? repoPreviewImage(project.repo),
   }));
 };
-
-export const getProject = async (repo: string) =>
-  (await getProjects()).find((project) => project.repo === repo);
