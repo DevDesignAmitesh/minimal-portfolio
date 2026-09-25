@@ -54,7 +54,7 @@ export const data = {
     description:
       "Harkirat Singh's 6-month, live-in program with limited seats: a hacker house where we ship AI projects through contests and hackathons.",
     builds: [
-      { label: "Browser agent · AI Hackathon", href: "https://drive.google.com/file/d/1EU5WRId3RgwPABsvL_ipufQrlJtgI_yT/view" },
+      { label: "Browser agent · AI Hackathon", href: "https://x.com/Amitesh48256/status/2089757991537115295" },
       { label: "RAG pipeline contest", href: "https://x.com/Amitesh48256/status/2093023490630983863" },
       { label: "Voice AI agent", href: "https://x.com/Amitesh48256/status/2097669932276412711" },
       { label: "Coding harness", href: "https://x.com/Amitesh48256/status/2062168207440626121" },
@@ -69,6 +69,7 @@ export const data = {
     "https://x.com/Amitesh48256/status/2101726785243333057",
     "https://x.com/Amitesh48256/status/2090832087884714125",
     "https://x.com/Amitesh48256/status/2097669932276412711",
+    "https://x.com/Amitesh48256/status/2089757991537115295",
     "https://x.com/Amitesh48256/status/2093023490630983863",
     "https://x.com/Amitesh48256/status/2091465513734189532",
     "https://x.com/Amitesh48256/status/2082910095235764403",
