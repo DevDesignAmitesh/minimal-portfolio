@@ -21,7 +21,7 @@ export const revalidate = 21600;
 //   tweets (3)                     contact (2) | linkedin + x
 export default async function Page() {
   const [projects, blogs] = await Promise.all([getProjects(), getMediumBlogs()]);
-  const [featured] = projects;
+  const featured = projects.find((project) => project.featured) ?? projects[0];
   const blogCovers = getHomepageBlogs(blogs, 3);
 
   return (

@@ -14,13 +14,19 @@ export const FeaturedProjectCard = ({
   index: number;
   className?: string;
 }) => {
-  const { title, description, image, video, liveUrl, githubUrl } = project;
+  const { title, description, image, video, liveUrl, githubUrl, highlight } = project;
 
   return (
     <Card index={index} className={`flex flex-col ${className}`}>
       <p className="text-xs font-medium uppercase tracking-wider text-subtle">Featured project</p>
       <h2 className="mt-1 text-lg leading-snug text-foreground">{title}</h2>
       <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
+      {highlight ? (
+        <p className="mt-3 inline-flex w-fit items-center gap-2 rounded-lg bg-pill px-2.5 py-1 text-xs font-medium text-foreground">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+          {highlight}
+        </p>
+      ) : null}
 
       <div className="mt-5 overflow-hidden rounded-xl bg-gradient-to-br from-rose-200 via-orange-100 to-violet-200 p-3 dark:from-rose-300/80 dark:via-orange-200/70 dark:to-violet-300/80">
         <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-black shadow-lg">

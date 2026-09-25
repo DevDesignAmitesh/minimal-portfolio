@@ -1,7 +1,7 @@
 import { getRepoDescriptions, repoPreviewImage, repoUrl } from "./github";
 
 // Descriptions come from GitHub (repo description); only what GitHub doesn't know lives here.
-// Order = display order. The first project is featured on its own card.
+// Order = display order in the list. The project marked `featured` also gets its own card.
 export interface PortfolioProject {
   repo: string; // GitHub repo name
   title: string;
@@ -12,6 +12,9 @@ export interface PortfolioProject {
   image?: string;
   // Optional ".mp4" / ".webm" in /public, played silently on the featured card.
   video?: string;
+  featured?: boolean;
+  // One-line traction stat shown on the featured card.
+  highlight?: string;
 }
 
 export const projects: PortfolioProject[] = [
@@ -51,6 +54,8 @@ export const projects: PortfolioProject[] = [
   {
     repo: "screensy",
     image: "/projects/screensy.png",
+    featured: true,
+    highlight: "150+ demos shipped with it, and people are using it",
     title: "Screensy",
     description:
       "Browser-based screen recorder compositing screen, face cam and wallpaper client-side. Video is never uploaded.",
