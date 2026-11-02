@@ -2,8 +2,6 @@ import Image from "next/image";
 import { data } from "@/src/data/data";
 import Card from "./Card";
 import ThemeToggle from "./ThemeToggle";
-import ViewCounter from "./ViewCounter";
-
 const HeroCard = ({ index, className }: { index: number; className?: string }) => {
   const { name, location, availability } = data;
 
@@ -31,7 +29,6 @@ const HeroCard = ({ index, className }: { index: number; className?: string }) =
             {availability}
           </span>
           <span>{location}</span>
-          <ViewCounter />
         </p>
       </div>
 

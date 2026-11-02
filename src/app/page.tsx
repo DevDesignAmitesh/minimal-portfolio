@@ -7,6 +7,7 @@ import ExperienceCard from "../components/bento/ExperienceCard";
 import HeroCard from "../components/bento/HeroCard";
 import { FeaturedProjectCard, ProjectsListCard } from "../components/bento/ProjectCards";
 import TweetStrip from "../components/bento/TweetStrip";
+import ViewCounter from "../components/bento/ViewCounter";
 import { getHomepageBlogs, getMediumBlogs } from "../data/blogs";
 import { data } from "../data/data";
 import { getProjects } from "../data/projects";
@@ -63,6 +64,9 @@ export default async function Page() {
           Ansh Mehra
         </a>
         . I handled the WebSockets, he&apos;d already handled the aesthetics. Thanks, Ansh.
+        <span className="mt-3 flex justify-center">
+          <ViewCounter />
+        </span>
       </footer>
     </main>
   );
