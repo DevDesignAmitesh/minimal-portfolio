@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   },
   description,
   metadataBase: new URL("https://www.amitesh.work"),
+  // X's video CDN (video.twimg.com) answers 403 when the Referer is another site, which stops the
+  // embedded tweet videos from playing. <video> has no per-element referrerpolicy, so it's page-wide.
+  referrer: "no-referrer",
   openGraph: {
     title,
     description,

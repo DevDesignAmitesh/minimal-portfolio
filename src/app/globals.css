@@ -95,7 +95,7 @@
   --tweet-container-margin: 0;
   --tweet-font-family: inherit;
   --tweet-bg-color: var(--card);
-  --tweet-bg-color-hover: var(--pill);
+  --tweet-bg-color-hover: var(--card); /* no hover tint: cards stay still */
   --tweet-quoted-bg-color-hover: var(--pill);
   --tweet-border: 1px solid var(--border);
   --tweet-font-color: var(--foreground);
@@ -118,22 +118,27 @@
   overflow: hidden;
 }
 
+/* Parts keep their natural size; only the gap above the footer flexes. */
+.bento-tweet > article > * {
+  flex-shrink: 0;
+}
+
 .bento-tweet-body > p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  height: 7rem; /* 5 lines x --tweet-body-line-height, so media lines up across cards */
+  -webkit-line-clamp: 3;
+  height: 4.2rem; /* 3 lines x --tweet-body-line-height, so media lines up across cards */
   overflow: hidden;
 }
 
 /* Text-only tweets get the media's space for more lines instead. */
 .bento-tweet > article:not(:has(.bento-tweet-media)) .bento-tweet-body > p {
-  -webkit-line-clamp: 12;
+  -webkit-line-clamp: 10;
   height: auto;
 }
 
 .bento-tweet-media > div {
-  height: 180px;
+  height: 160px;
 }
 
 /* react-tweet sizes media with an inline aspect-ratio padding; the fixed box above replaces it. */

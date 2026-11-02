@@ -2,6 +2,7 @@ import Image from "next/image";
 import { data } from "@/src/data/data";
 import Card from "./Card";
 import ThemeToggle from "./ThemeToggle";
+import ViewCounter from "./ViewCounter";
 
 const HeroCard = ({ index, className }: { index: number; className?: string }) => {
   const { name, location, availability } = data;
@@ -22,14 +23,15 @@ const HeroCard = ({ index, className }: { index: number; className?: string }) =
         <h1 className="text-xl leading-snug tracking-[-0.04em] text-foreground sm:text-[22px]">
           I&apos;m {name},
           <br />
-          Backend Engineer building <span className="font-bold">Real-time Systems</span>
+          <span className="font-bold">Backend Engineer</span> who loves <span className="font-bold">creating content</span>
         </h1>
-        <p className="mt-2 flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground sm:text-base">
-          <span>Exploring AI agents · {location}</span>
+        <p className="mt-2 flex flex-wrap items-center gap-x-3 text-sm text-muted-foreground sm:text-base">
           <span className="inline-flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
             {availability}
           </span>
+          <span>{location}</span>
+          <ViewCounter />
         </p>
       </div>
 

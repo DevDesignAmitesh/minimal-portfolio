@@ -14,21 +14,45 @@ export const FeaturedProjectCard = ({
   index: number;
   className?: string;
 }) => {
-  const { title, description, image, video, liveUrl, githubUrl, highlight } = project;
+  const { title, description, image, video, liveUrl, githubUrl, highlight, techTags } = project;
 
+  // Wide card: the pitch on the left, the product on the right (stacked on small screens).
   return (
-    <Card index={index} className={`flex flex-col ${className}`}>
-      <p className="text-xs font-medium uppercase tracking-wider text-subtle">Featured project</p>
-      <h2 className="mt-1 text-lg leading-snug text-foreground">{title}</h2>
-      <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
-      {highlight ? (
-        <p className="mt-3 inline-flex w-fit items-center gap-2 rounded-lg bg-pill px-2.5 py-1 text-xs font-medium text-foreground">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
-          {highlight}
-        </p>
-      ) : null}
+    <Card index={index} className={`grid items-center gap-6 sm:grid-cols-[1fr_1.15fr] ${className}`}>
+      <div className="flex h-full flex-col">
+        <p className="text-sm text-subtle">Featured project</p>
+        <h2 className="mt-1 text-2xl leading-tight tracking-[-0.03em] text-foreground">{title}</h2>
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{description}</p>
+        {highlight ? (
+          <p className="mt-4 flex items-start gap-2 text-sm text-foreground">
+            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden="true" />
+            {highlight}
+          </p>
+        ) : null}
+        <p className="mt-2 text-xs text-subtle">{techTags.slice(0, 3).join(", ")}</p>
 
-      <div className="mt-5 overflow-hidden rounded-xl bg-gradient-to-br from-rose-200 via-orange-100 to-violet-200 p-3 dark:from-rose-300/80 dark:via-orange-200/70 dark:to-violet-300/80">
+        <div className="mt-5 flex gap-2 sm:mt-auto sm:pt-5">
+          <a
+            href={liveUrl ?? githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 rounded-[10px] bg-primary py-2 text-center text-sm font-bold text-primary-foreground transition-opacity hover:opacity-85"
+          >
+            Try {title}
+          </a>
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-10 items-center justify-center rounded-[10px] bg-pill text-foreground transition-opacity hover:opacity-80"
+            aria-label={`${title} source code`}
+          >
+            <Github className="h-4 w-4" />
+          </a>
+        </div>
+      </div>
+
+      <div className="rounded-xl bg-gradient-to-br from-rose-200 via-orange-100 to-violet-200 p-3 dark:from-rose-300/80 dark:via-orange-200/70 dark:to-violet-300/80">
         <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-black shadow-lg">
           {video && isVideoFile(video) ? (
             <video
@@ -42,29 +66,9 @@ export const FeaturedProjectCard = ({
               aria-label={`${title} demo`}
             />
           ) : (
-            <Image src={image} alt={`${title} screenshot`} fill sizes="(min-width: 1024px) 360px, 100vw" className="object-cover object-top" />
+            <Image src={image} alt={`${title} screenshot`} fill sizes="(min-width: 1024px) 420px, 100vw" className="object-cover object-top" />
           )}
         </div>
-      </div>
-
-      <div className="mt-5 flex gap-2">
-        <a
-          href={liveUrl ?? githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 rounded-[10px] bg-pill py-2 text-center text-sm font-bold text-foreground transition-opacity hover:opacity-80"
-        >
-          Know more
-        </a>
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex w-10 items-center justify-center rounded-[10px] bg-pill text-foreground transition-opacity hover:opacity-80"
-          aria-label={`${title} source code`}
-        >
-          <Github className="h-4 w-4" />
-        </a>
       </div>
     </Card>
   );

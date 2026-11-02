@@ -14,9 +14,9 @@ const TweetStrip = ({ ids, index, className = "" }: { ids: string[]; index: numb
     <div className="mb-4 flex items-end justify-between gap-4 px-1">
       <div>
         <h2 id="tweets-heading" className="text-lg leading-snug text-foreground">
-          Building in public
+          I also make content
         </h2>
-        <p className="text-sm text-muted-foreground">Skits, launches and hackathon demos from X.</p>
+        <p className="text-sm text-muted-foreground">Skits, launches and build-in-public demos from X.</p>
       </div>
       <a
         href={data.socialLinks.twitter}
@@ -31,7 +31,7 @@ const TweetStrip = ({ ids, index, className = "" }: { ids: string[]; index: numb
 
     <HorizontalScroller label="Tweets, newest first">
       {ids.map((id) => (
-        <div key={id} className="h-[480px] w-[85%] shrink-0 snap-start sm:w-[340px]">
+        <div key={id} className="h-[400px] w-[85%] shrink-0 snap-start sm:w-[340px]">
           <BentoTweet id={id} />
         </div>
       ))}

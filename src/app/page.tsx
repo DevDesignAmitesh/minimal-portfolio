@@ -6,7 +6,6 @@ import { ContactCard, SocialTiles } from "../components/bento/ContactRow";
 import ExperienceCard from "../components/bento/ExperienceCard";
 import HeroCard from "../components/bento/HeroCard";
 import { FeaturedProjectCard, ProjectsListCard } from "../components/bento/ProjectCards";
-import Super30Card from "../components/bento/Super30Card";
 import TweetStrip from "../components/bento/TweetStrip";
 import { getHomepageBlogs, getMediumBlogs } from "../data/blogs";
 import { data } from "../data/data";
@@ -16,9 +15,10 @@ import { getTweetIdsNewestFirst } from "../data/tweets";
 export const revalidate = 21600;
 
 // Grid (lg, 3 columns), in DOM order so auto-placement builds the bento:
-//   hero (2) | bio (tall)          experience | super 30 | projects list (tall)
-//   github | resume | ↑            featured | blogs | ↑
+//   hero (2) | bio (tall)          featured (2)        | projects list (tall)
+//   github | resume | ↑            experience | blogs  | ↑
 //   tweets (3)                     contact (2) | linkedin + x
+// Tweets sit high on purpose: the content work is part of the pitch, not an afterthought.
 export default async function Page() {
   const [projects, blogs] = await Promise.all([getProjects(), getMediumBlogs()]);
   const featured = projects.find((project) => project.featured) ?? projects[0];
@@ -42,17 +42,15 @@ export default async function Page() {
         </p>
       </Card>
 
-      <ExperienceCard index={4} />
-      <Super30Card index={5} />
-      <ProjectsListCard index={6} projects={projects} className="sm:col-span-2 lg:col-span-1 lg:row-span-2" />
+      <TweetStrip index={4} ids={getTweetIdsNewestFirst()} className="sm:col-span-2 lg:col-span-3" />
 
-      {featured ? <FeaturedProjectCard index={7} project={featured} /> : null}
+      {featured ? <FeaturedProjectCard index={5} project={featured} className="sm:col-span-2" /> : null}
+      <ProjectsListCard index={6} projects={projects} className="sm:col-span-2 lg:col-span-1 lg:row-span-2" />
+      <ExperienceCard index={7} />
       <BlogsCard index={8} blogs={blogCovers} />
 
-      <TweetStrip index={9} ids={getTweetIdsNewestFirst()} className="sm:col-span-2 lg:col-span-3" />
-
-      <ContactCard index={10} className="sm:col-span-2" />
-      <SocialTiles index={11} className="sm:col-span-2 lg:col-span-1" />
+      <ContactCard index={9} className="sm:col-span-2" />
+      <SocialTiles index={10} className="sm:col-span-2 lg:col-span-1" />
 
       <footer className="pt-2 pb-4 text-center text-xs leading-relaxed text-subtle sm:col-span-2 lg:col-span-3">
         Bento layout lovingly borrowed from{" "}

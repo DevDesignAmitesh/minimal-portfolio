@@ -28,12 +28,26 @@ export const projects: PortfolioProject[] = [
     liveUrl: "https://exchange.amitesh.work/",
   },
   {
+    repo: "my-search-engine",
+    title: "Search Engine",
+    description:
+      "A small web search engine: submit a URL, it crawls outward from there, builds an inverted index, and lets you search what it found.",
+    techTags: ["TypeScript", "Bun", "Express", "React"],
+  },
+  {
     repo: "browser-agent",
     title: "Browser Agent",
     description:
       "Autonomous AI agent that completes natural-language tasks on live websites: plans, observes the page, clicks, types and scrolls.",
     techTags: ["TypeScript", "Playwright", "OpenAI API", "Express", "PostgreSQL"],
     liveUrl: "https://drive.google.com/file/d/1EU5WRId3RgwPABsvL_ipufQrlJtgI_yT/view",
+  },
+  {
+    repo: "my-dmrc-booking-flow",
+    title: "DMRC Booking on ONDC",
+    description:
+      "How a buyer app books Delhi Metro QR tickets over the ONDC network (TRV11 spec), with signed async messages and mocked sellers.",
+    techTags: ["TypeScript", "ONDC", "React", "Vite"],
   },
   {
     repo: "quickduel",
@@ -52,6 +66,13 @@ export const projects: PortfolioProject[] = [
     techTags: ["TypeScript", "Bun", "OpenAI API", "Gemini API", "E2B"],
   },
   {
+    repo: "autocannon-load-testing",
+    title: "Load Testing Lab",
+    description:
+      "A bookings API load-tested with autocannon, including 100 connections racing to book the same room to prove the lock holds.",
+    techTags: ["TypeScript", "Bun", "Express", "autocannon"],
+  },
+  {
     repo: "screensy",
     image: "/projects/screensy.png",
     featured: true,
@@ -61,6 +82,13 @@ export const projects: PortfolioProject[] = [
       "Browser-based screen recorder compositing screen, face cam and wallpaper client-side. Video is never uploaded.",
     techTags: ["TypeScript", "Next.js", "Canvas API", "Express", "PostgreSQL"],
     liveUrl: "https://screensy.amitesh.work/",
+  },
+  {
+    repo: "my-obs",
+    title: "AI Video Studio",
+    description:
+      "My personal desktop recorder and AI video editor: captions, transcription, motion and an assistant that edits with me.",
+    techTags: ["Electron", "TypeScript", "FFmpeg", "Claude API"],
   },
   {
     repo: "tui-typer",

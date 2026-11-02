@@ -12,7 +12,7 @@ interface CardProps {
 const Card = ({ children, className = "", index = 0, dashed = false, href }: CardProps) => {
   const classes = `bento-reveal relative rounded-bento p-5 sm:p-6 ${
     dashed ? "border border-dashed border-outline bg-card dark:bg-transparent" : "bg-card"
-  } ${href ? "transition-transform duration-200 hover:-translate-y-0.5" : ""} ${className}`;
+  } ${className}`;
   const style = { "--i": index } as CSSProperties;
 
   if (href) {
