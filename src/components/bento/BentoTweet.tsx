@@ -8,14 +8,12 @@ import {
   TweetMedia,
   TweetNotFound,
 } from "react-tweet";
-import { getTweet } from "react-tweet/api";
+import type { Tweet } from "react-tweet/api";
 
-// react-tweet's default <Tweet> sizes itself to its content, so cards in the strip end up
+// react-tweet's default <Tweet> sizes itself to its content, so cards in a row end up
 // different heights. This composes the same parts into a fixed-height card: text is clamped,
 // media gets a fixed box, and date/likes are pinned to the bottom (see .bento-tweet in globals.css).
-const BentoTweet = async ({ id }: { id: string }) => {
-  const tweet = await getTweet(id, { next: { revalidate: 21600 } }).catch(() => undefined);
-
+const BentoTweet = ({ tweet }: { tweet?: Tweet }) => {
   if (!tweet) {
     return (
       <div className="bento-tweet h-full">

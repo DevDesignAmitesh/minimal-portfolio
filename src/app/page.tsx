@@ -7,21 +7,21 @@ import ExperienceCard from "../components/bento/ExperienceCard";
 import HeroCard from "../components/bento/HeroCard";
 import { FeaturedProjectCard, ProjectsListCard } from "../components/bento/ProjectCards";
 import SiteFooter from "../components/bento/SiteFooter";
-import TweetStrip from "../components/bento/TweetStrip";
+import ContentSection from "../components/bento/ContentSection";
 import { getHomepageBlogs, getMediumBlogs } from "../data/blogs";
 import { data } from "../data/data";
 import { getProjects } from "../data/projects";
-import { getTweetIdsNewestFirst } from "../data/tweets";
+import { getContentHighlights } from "../data/tweets";
 
 export const revalidate = 21600;
 
 // Grid (lg, 3 columns), in DOM order so auto-placement builds the bento:
 //   hero (2) | bio (tall)          featured (2)        | projects list (tall)
 //   github | resume | ↑            experience | blogs  | ↑
-//   tweets (3)                     contact (2) | linkedin + x
+//   content (3)                    contact (2) | linkedin + x
 // Tweets sit high on purpose: the content work is part of the pitch, not an afterthought.
 export default async function Page() {
-  const [projects, blogs] = await Promise.all([getProjects(), getMediumBlogs()]);
+  const [projects, blogs, highlights] = await Promise.all([getProjects(), getMediumBlogs(), getContentHighlights(4)]);
   const featured = projects.find((project) => project.featured) ?? projects[0];
   const blogCovers = getHomepageBlogs(blogs, 3);
 
@@ -44,7 +44,7 @@ export default async function Page() {
         </p>
       </Card>
 
-      <TweetStrip index={4} ids={getTweetIdsNewestFirst()} className="sm:col-span-2 lg:col-span-3" />
+      <ContentSection index={4} highlights={highlights} className="sm:col-span-2 lg:col-span-3" />
 
       {featured ? <FeaturedProjectCard index={5} project={featured} className="sm:col-span-2" /> : null}
       <ProjectsListCard index={6} projects={projects} className="sm:col-span-2 lg:col-span-1 lg:row-span-2" />
