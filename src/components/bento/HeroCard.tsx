@@ -9,7 +9,7 @@ const HeroCard = ({ index, className }: { index: number; className?: string }) =
     <Card index={index} className={`flex items-center gap-5 py-7 sm:py-8 xl:pl-24 ${className}`}>
       {/* On wide screens the avatar hangs off the card's left edge, like the reference. */}
       <Image
-        src="/profile.png"
+        src="/profile.jpg"
         alt={`${name} profile photo`}
         width={80}
         height={80}

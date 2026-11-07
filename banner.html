@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Amitesh Banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  /* Colours from src/app/globals.css: light #f2f2f2 / #0a0a0a, dark #080808 / #ffffff */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #cfcfcf; }
+  body { display: grid; place-items: center; min-height: 100vh; font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  .banner { position: relative; width: 1500px; height: 500px; overflow: hidden; background: #f2f2f2; isolation: isolate; }
+
+  /* dark half, with a slanted seam through the middle */
+  .dark-half { position: absolute; inset: 0; background: #080808; clip-path: polygon(800px 0, 1500px 0, 1500px 500px, 700px 500px); z-index: 0; }
+
+  /* big quiet section words behind the collage */
+  .ghost { position: absolute; z-index: 1; font-weight: 800; letter-spacing: -.06em; line-height: .8; font-size: 168px; white-space: nowrap; pointer-events: none; }
+  .ghost.l { left: -10px; bottom: -22px; color: #e6e6e6; }
+  .ghost.r { right: -12px; bottom: -22px; color: #121212; }
+
+  .shot {
+    position: absolute; border-radius: 14px; overflow: hidden;
+    transform: rotate(var(--r, 0deg));
+  }
+  .shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, top); }
+  .light-shot { box-shadow: 0 18px 40px rgba(0,0,0,.16), 0 3px 8px rgba(0,0,0,.08); }
+  .dark-shot  { box-shadow: 0 18px 44px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.06); }
+
+  .cap {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 12px 9px;
+    background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0));
+    color: #fff; font-size: 12px; font-weight: 700; letter-spacing: -.01em; line-height: 1.2;
+  }
+  .cap small { display: block; font-size: 9.5px; font-weight: 600; opacity: .7; letter-spacing: .02em; margin-bottom: 2px; text-transform: uppercase; }
+
+  .play { position: absolute; left: 50%; top: 44%; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; background: rgba(255,255,255,.95); box-shadow: 0 4px 14px rgba(0,0,0,.4); }
+  .play::after { content: ""; position: absolute; left: 13px; top: 10px; border-left: 11px solid #000; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+
+  /* centre */
+  .me { left: 632px; top: 34px; width: 236px; height: 236px; border-radius: 26px; --r: -3deg; z-index: 20;
+        box-shadow: 0 24px 60px rgba(0,0,0,.45), 0 4px 12px rgba(0,0,0,.2); }
+  .me img { object-position: 35% 20%; }
+
+  .about { position: absolute; left: 0; right: 0; top: 206px; z-index: 30; text-align: center; color: #fff; mix-blend-mode: difference; }
+  .about h1 { font-size: 64px; font-weight: 800; letter-spacing: -.05em; line-height: 1; }
+  .about p { font-size: 17px; font-weight: 500; margin-top: 10px; letter-spacing: -.01em; }
+  .about p b { font-weight: 800; }
+  .about .meta { font-size: 13px; font-weight: 600; margin-top: 10px; opacity: .75; letter-spacing: .01em; }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="dark-half"></div>
+  <div class="ghost l">Projects</div>
+  <div class="ghost r">Content</div>
+
+  <!-- PROJECTS · light -->
+  <figure class="shot light-shot" style="left:24px;top:40px;width:290px;height:182px;--r:-5deg;z-index:4">
+    <img src="public/projects/cex.png" alt="" />
+    <figcaption class="cap"><small>Bun · Redis · WebSockets</small>Centralized Exchange</figcaption>
+  </figure>
+  <figure class="shot light-shot" style="left:292px;top:20px;width:260px;height:162px;--r:4deg;z-index:5">
+    <img src="public/projects/quickduel.png" alt="" />
+    <figcaption class="cap"><small>Redis · BullMQ · WebSockets</small>QuickDuel</figcaption>
+  </figure>
+  <figure class="shot light-shot" style="left:540px;top:14px;width:232px;height:145px;--r:-3deg;z-index:6">
+    <img src="public/projects/screensy.png" alt="" />
+    <figcaption class="cap"><small>150+ demos shipped</small>Screensy</figcaption>
+  </figure>
+  <figure class="shot light-shot" style="left:196px;top:236px;width:270px;height:169px;--r:-3deg;z-index:7">
+    <img src="public/projects/sketchsprint.png" alt="" />
+    <figcaption class="cap"><small>Raw WebSockets · Canvas</small>SketchSprint</figcaption>
+  </figure>
+  <figure class="shot light-shot" style="left:462px;top:332px;width:220px;height:138px;--r:5deg;z-index:8">
+    <img src="public/projects/sphere-landing.png" alt="" />
+    <figcaption class="cap"><small>Next.js · Motion</small>Sphere Events</figcaption>
+  </figure>
+
+  <!-- CONTENT · dark -->
+  <figure class="shot dark-shot" style="left:800px;top:28px;width:236px;height:118px;--r:-4deg;z-index:6;--pos:center 8%">
+    <img src="banner-assets/t-load.jpg" alt="" /><span class="play"></span>
+    <figcaption class="cap"><small>Video on X</small>Load testing my backend</figcaption>
+  </figure>
+  <figure class="shot dark-shot" style="left:1046px;top:30px;width:270px;height:152px;--r:4deg;z-index:5;--pos:center">
+    <img src="banner-assets/t-maps.jpg" alt="" /><span class="play"></span>
+    <figcaption class="cap"><small>Video on X</small>How does Google Maps work?</figcaption>
+  </figure>
+  <figure class="shot dark-shot" style="left:1318px;top:22px;width:156px;height:208px;--r:-6deg;z-index:7;--pos:center 30%">
+    <img src="banner-assets/m-metro.jpg" alt="" />
+    <figcaption class="cap"><small>Article on Medium</small>A metro ticket and distributed systems</figcaption>
+  </figure>
+  <figure class="shot dark-shot" style="left:1016px;top:214px;width:252px;height:142px;--r:3deg;z-index:8;--pos:center 30%">
+    <img src="banner-assets/t-metro.jpg" alt="" /><span class="play"></span>
+    <figcaption class="cap"><small>Video on X</small>I coded my own metro ticket booking system</figcaption>
+  </figure>
+  <figure class="shot dark-shot" style="left:1252px;top:268px;width:228px;height:128px;--r:-3deg;z-index:9;--pos:center 35%">
+    <img src="banner-assets/t-search.jpg" alt="" /><span class="play"></span>
+    <figcaption class="cap"><small>Video on X</small>I coded my own search engine</figcaption>
+  </figure>
+  <figure class="shot dark-shot" style="left:808px;top:334px;width:214px;height:120px;--r:4deg;z-index:7;--pos:center 30%">
+    <img src="banner-assets/t-voice.jpg" alt="" /><span class="play"></span>
+    <figcaption class="cap"><small>Video on X</small>Built a voice AI agent</figcaption>
+  </figure>
+
+  <!-- CENTRE · about -->
+  <div class="about">
+    <h1>Amitesh Singh</h1>
+    <p><b>Backend Engineer</b> who loves <b>creating content</b></p>
+  </div>
+</div>
+</body>
+</html>
