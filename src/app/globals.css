@@ -81,6 +81,47 @@
   }
 }
 
+/* Footer: faded banner + giant clipped name (SiteFooter). */
+.footer-banner {
+  opacity: 0;
+  transform: translateY(12%);
+  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1), transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+  /* fade the top and sides so the banner melts into the page */
+  mask-image:
+    linear-gradient(to bottom, transparent 18%, rgb(0 0 0 / 0.55) 55%, #000 90%),
+    linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.footer-name {
+  color: color-mix(in srgb, var(--foreground) 60%, transparent);
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(60%);
+  transition:
+    opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+    filter 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.site-footer[data-visible="true"] .footer-banner {
+  opacity: 0.28;
+  transform: none;
+}
+
+.site-footer[data-visible="true"] .footer-name {
+  opacity: 1;
+  filter: none;
+  transform: translateY(24%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-banner,
+  .footer-name {
+    transition: none;
+  }
+}
+
 .no-scrollbar {
   scrollbar-width: none;
 }

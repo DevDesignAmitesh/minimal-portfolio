@@ -6,7 +6,9 @@ import { ContactCard, SocialTiles } from "../components/bento/ContactRow";
 import ExperienceCard from "../components/bento/ExperienceCard";
 import HeroCard from "../components/bento/HeroCard";
 import { FeaturedProjectCard, ProjectsListCard } from "../components/bento/ProjectCards";
-import TweetStrip from "../components/bento/TweetStrip";import { getHomepageBlogs, getMediumBlogs } from "../data/blogs";
+import SiteFooter from "../components/bento/SiteFooter";
+import TweetStrip from "../components/bento/TweetStrip";
+import { getHomepageBlogs, getMediumBlogs } from "../data/blogs";
 import { data } from "../data/data";
 import { getProjects } from "../data/projects";
 import { getTweetIdsNewestFirst } from "../data/tweets";
@@ -24,6 +26,7 @@ export default async function Page() {
   const blogCovers = getHomepageBlogs(blogs, 3);
 
   return (
+    <>
     <main className="mx-auto grid max-w-[1192px] grid-cols-1 gap-4 px-4 py-6 sm:grid-cols-2 sm:py-8 lg:grid-cols-3 lg:gap-6 xl:px-0">
       <HeroCard index={0} className="sm:col-span-2" />
       <BioCard index={1} className="sm:col-span-2 lg:col-span-1 lg:row-span-2" />
@@ -64,5 +67,7 @@ export default async function Page() {
         . I handled the WebSockets, he&apos;d already handled the aesthetics. Thanks, Ansh.
       </footer>
     </main>
+    <SiteFooter />
+    </>
   );
 }
