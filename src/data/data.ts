@@ -2,7 +2,7 @@ export const data = {
   name: "Amitesh Singh",
   headline: "Backend engineer building real-time systems, and creating content about it",
   location: "Delhi, India",
-  availability: "Founding Engineer at Macro Rides",
+  availability: "Available for work",
   email: "amiteshsingh252@gmail.com",
 
   socialLinks: {
@@ -23,7 +23,7 @@ export const data = {
     lead: "I'm a backend engineer who ships real-time systems end to end,",
     leadEmphasis: "and I love creating content about what I build.",
     paragraphs: [
-      "I'm the **founding engineer at Macro Rides**, an EV ride platform in Delhi. I shipped the product end to end and hired the team.",
+      "I was the **founding engineer at Macro Rides**, an EV ride platform in Delhi. I shipped the product end to end and hired the team. Now **open to new roles**.",
       "I post skits and build-in-public demos on X, and I've built a **personal brand** there.",
       "Currently in **Super 30**, 100xSchool's 6-month engineering bootcamp.",
     ],
@@ -33,7 +33,7 @@ export const data = {
     {
       company: "Macro Rides",
       role: "Founding Full Stack Engineer",
-      period: "Oct 2024 – Present",
+      period: "Oct 2024 – Nov 2026",
       summary: "First engineer at a Delhi EV ride platform. Shipped the product, one-push CI/CD, hired the team.",
     },
     {
