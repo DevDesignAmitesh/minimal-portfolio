@@ -9,12 +9,12 @@
 <meta charset="utf-8">
 <title>Amitesh Singh - Resume</title>
 <style>
-  @page { size: A4; margin: 10mm 13mm; }
+  @page { size: A4; margin: 9mm 13mm; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 9.4pt;
-    line-height: 1.38;
+    font-size: 9.1pt;
+    line-height: 1.33;
     color: #1a1a1a;
   }
   a { color: inherit; text-decoration: none; }
@@ -23,6 +23,7 @@
   .headline { font-size: 10.5pt; font-weight: 600; color: #333; margin-top: 1pt; }
   .contact { margin-top: 4pt; color: #333; }
   .contact a { text-decoration: underline; text-underline-offset: 1.5pt; }
+  .ic { width: 0.95em; height: 0.95em; vertical-align: -0.13em; margin-right: 3pt; }
   .sep { color: #999; margin: 0 5pt; }
   h2 {
     font-size: 10pt;
@@ -31,14 +32,22 @@
     text-transform: uppercase;
     border-bottom: 1.2pt solid #222;
     padding-bottom: 1.5pt;
-    margin: 9pt 0 5pt;
+    margin: 8pt 0 4pt;
   }
-  .entry { margin-bottom: 6pt; break-inside: avoid; }
+  .entry { margin-bottom: 5pt; break-inside: avoid; }
   .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
   .title { font-weight: 700; }
   .meta { color: #444; white-space: nowrap; }
   .sub { font-style: italic; color: #333; }
   .stack { color: #444; font-style: italic; }
+  .links { font-size: 8.6pt; color: #333; margin-top: 0.5pt; }
+  .iconlink { text-decoration: none !important; margin-left: 6pt; }
+  .contact .iconlink { margin-left: 0; }
+  .iconlink.labeled { margin-left: 9pt; font-size: 8.6pt; color: #222; }
+  .iconlink.labeled .ic { width: 1em; height: 1em; margin-right: 2.5pt; }
+  .iconlink.labeled span { text-decoration: underline; text-underline-offset: 1.5pt; }
+  .title .iconlink.labeled { font-weight: 400; margin-left: 4pt; }
+  .iconlink .ic { width: 1.1em; height: 1.1em; margin-right: 0; }
   .links a { text-decoration: underline; text-underline-offset: 1.5pt; }
   ul { margin: 2pt 0 0 13pt; }
   li { margin-bottom: 1pt; }
@@ -51,9 +60,9 @@
 
 <header>
   <h1>Amitesh Singh</h1>
-  <div class="headline">Backend &amp; Real-time Systems Engineer · Exploring AI Agents</div>
+  <div class="headline">Backend &amp; Real-time Systems Engineer</div>
   <div class="contact">
-    Delhi, India<span class="sep">|</span><a href="mailto:amiteshsingh252@gmail.com">amiteshsingh252@gmail.com</a><span class="sep">|</span><a href="https://www.amitesh.work">amitesh.work</a><span class="sep">|</span><a href="https://github.com/DevDesignAmitesh">github.com/DevDesignAmitesh</a><span class="sep">|</span><a href="https://www.linkedin.com/in/amitesh-singh-504b2b281/">LinkedIn</a>
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Delhi, India<span class="sep">|</span><a href="mailto:amiteshsingh252@gmail.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>amiteshsingh252@gmail.com</a><span class="sep">|</span><a style="margin-left:0" href="https://www.amitesh.work" class="iconlink" title="https://www.amitesh.work"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></a><span class="sep">|</span><a href="https://www.linkedin.com/in/amitesh-singh-504b2b281/" class="iconlink" title="https://www.linkedin.com/in/amitesh-singh-504b2b281/"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a><span class="sep">|</span><a href="https://github.com/DevDesignAmitesh" class="iconlink" title="https://github.com/DevDesignAmitesh"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
   </div>
 </header>
 
@@ -65,13 +74,13 @@
 <h2>Experience</h2>
 
 <div class="entry">
-  <div class="row"><span class="title">Macro Rides <span class="meta" style="font-weight:400">· zone-based EV ride platform, Delhi</span></span><span class="meta">Oct 2024 – Nov 2026</span></div>
+  <div class="row"><span class="title">Macro Rides <a href="https://play.google.com/store/apps/details?id=com.macrorides.user" class="iconlink labeled" title="https://play.google.com/store/apps/details?id=com.macrorides.user"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.4.7-.4 1.2v18c0 .5.1.9.4 1.2l10.2-10.2L3.6 1.8zm11.6 8.8 2.9-2.9L5.4.4c-.4-.2-.8-.3-1.1-.2l10.9 10.4zm0 2.8L4.3 23.8c.3.1.7 0 1.1-.2l12.7-7.3-2.9-2.9zm5.9-3.4-2.6-1.5-3.2 3.1 3.2 3.1 2.6-1.5c.9-.5.9-1.7 0-2.2z"/></svg><span>Play Store</span></a> <span class="meta" style="font-weight:400">· zone-based EV ride platform, Delhi</span></span><span class="meta">Oct 2024 – Nov 2026</span></div>
   <div class="sub">Founding Full Stack Engineer</div>
   <ul>
-    <li>First engineer; architected and shipped the platform from zero to production across frontend, backend, and DevOps.</li>
+    <li>First engineer; took the platform from zero to a live Play Store app across frontend, backend, and DevOps.</li>
     <li>Replaced a ~30-minute manual deploy with a one-push CI/CD pipeline.</li>
     <li>Ran technical hiring end to end: designed interviews, evaluated candidates, and onboarded 2–3 engineers.</li>
-    <li>Owned production reliability and engineering timelines through the early-rider launch.</li>
+    <li>Took the rider app through its early-rider launch and kept it running in production.</li>
   </ul>
 </div>
 
@@ -88,7 +97,7 @@
 <h2>Projects</h2>
 
 <div class="entry">
-  <div class="row"><span><span class="title">Centralized Exchange</span> <span class="stack">| TypeScript, Bun, Redis, PostgreSQL, WebSockets, Docker</span></span><span class="links"><a href="https://exchange.amitesh.work/">Live</a> | <a href="https://github.com/DevDesignAmitesh/cex">GitHub</a></span></div>
+  <div class="row"><span><span class="title">Centralized Exchange</span> <span class="stack">| TypeScript, Bun, Redis, PostgreSQL, WebSockets, Docker</span></span><span class="links"><a href="https://exchange.amitesh.work/" class="iconlink labeled" title="https://exchange.amitesh.work/"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg><span>Live</span></a><a href="https://github.com/DevDesignAmitesh/cex" class="iconlink labeled" title="https://github.com/DevDesignAmitesh/cex"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><span>Source Code</span></a></span></div>
   <ul>
     <li>Built an exchange around an in-memory order-matching engine, decoupled from Postgres via Redis so matching never blocks on I/O.</li>
     <li>Split into independently scalable services (HTTP API, engine, WebSocket server, DB worker) linked by Redis pub/sub.</li>
@@ -97,7 +106,7 @@
 </div>
 
 <div class="entry">
-  <div class="row"><span><span class="title">QuickDuel</span> <span class="stack">| WebSockets, Redis, BullMQ, PostgreSQL, Next.js, AWS</span></span><span class="links"><a href="https://games.amitesh.work/">Live</a> | <a href="https://github.com/DevDesignAmitesh/quickduel">GitHub</a></span></div>
+  <div class="row"><span><span class="title">QuickDuel</span> <span class="stack">| WebSockets, Redis, BullMQ, PostgreSQL, Next.js, AWS</span></span><span class="links"><a href="https://games.amitesh.work/" class="iconlink labeled" title="https://games.amitesh.work/"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg><span>Live</span></a><a href="https://github.com/DevDesignAmitesh/quickduel" class="iconlink labeled" title="https://github.com/DevDesignAmitesh/quickduel"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><span>Source Code</span></a></span></div>
   <ul>
     <li>Real-time multiplayer maths game with server-authoritative state over WebSockets keeping both players in sync.</li>
     <li>Queue-based matchmaking in Redis to avoid race conditions; BullMQ workers for match and result jobs.</li>
@@ -105,14 +114,14 @@
 </div>
 
 <div class="entry">
-  <div class="row"><span><span class="title">Browser Agent</span> <span class="stack">| TypeScript, Playwright, OpenAI API, Express, Prisma, Next.js</span></span><span class="links"><a href="https://github.com/DevDesignAmitesh/browser-agent">GitHub</a></span></div>
+  <div class="row"><span><span class="title">Browser Agent</span> <span class="stack">| TypeScript, Playwright, OpenAI API, Express, Prisma, Next.js</span></span><span class="links"><a href="https://github.com/DevDesignAmitesh/browser-agent" class="iconlink labeled" title="https://github.com/DevDesignAmitesh/browser-agent"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><span>Source Code</span></a></span></div>
   <ul>
     <li>Autonomous agent that completes natural-language tasks on live websites with an observe → plan → act loop driving Chromium. Built at AI Hackathon S30 3.0.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="row"><span><span class="title">AI Agent CLI</span> <span class="stack">| TypeScript, Bun, OpenAI &amp; Gemini APIs, E2B</span></span><span class="links"><a href="https://github.com/DevDesignAmitesh/ai-agent-cli">GitHub</a></span></div>
+  <div class="row"><span><span class="title">AI Agent CLI</span> <span class="stack">| TypeScript, Bun, OpenAI &amp; Gemini APIs, E2B</span></span><span class="links"><a href="https://github.com/DevDesignAmitesh/ai-agent-cli" class="iconlink labeled" title="https://github.com/DevDesignAmitesh/ai-agent-cli"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><span>Source Code</span></a></span></div>
   <ul>
     <li>Terminal coding agent (a mini Claude Code) with a ReAct loop, tool calling, human-in-the-loop approvals, and a sandbox.</li>
     <li>Persistent cross-session memory, automatic context summarization, and pluggable model providers.</li>
@@ -120,7 +129,7 @@
 </div>
 
 <div class="entry">
-  <div class="row"><span><span class="title">tui-typer</span> <span class="stack">| TypeScript, React, Ink, WebSockets</span></span><span class="links"><a href="https://www.npmjs.com/package/tui-typer">npm</a> | <a href="https://github.com/DevDesignAmitesh/tui-typer">GitHub</a></span></div>
+  <div class="row"><span><span class="title">tui-typer</span> <span class="stack">| TypeScript, React, Ink, WebSockets</span></span><span class="links"><a href="https://www.npmjs.com/package/tui-typer" class="iconlink labeled" title="https://www.npmjs.com/package/tui-typer"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.76 0A1.76 1.76 0 0 0 0 1.76v20.48C0 23.2.79 24 1.76 24h20.48c.97 0 1.76-.79 1.76-1.76V1.76C24 .79 23.2 0 22.24 0H1.76zm3.53 5.29h13.42v13.42h-3.53V8.82h-3.18v9.89H5.29V5.29z"/></svg><span>npm</span></a><a href="https://github.com/DevDesignAmitesh/tui-typer" class="iconlink labeled" title="https://github.com/DevDesignAmitesh/tui-typer"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><span>Source Code</span></a></span></div>
   <ul>
     <li>Multiplayer terminal typing race with real-time rooms; published on npm with 1,000+ downloads in the last year.</li>
   </ul>
