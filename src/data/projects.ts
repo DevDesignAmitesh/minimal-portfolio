@@ -23,7 +23,7 @@ export const projects: PortfolioProject[] = [
     image: "/projects/cex.png",
     title: "Centralized Exchange",
     description:
-      "Crypto exchange with an in-memory order-matching engine, Redis-based async architecture, and real-time WebSocket market data.",
+      "Exchange with an in-memory price-time matching engine (limit/market orders, partial fills), Redis Streams between services, and live order books and candlesticks over WebSockets.",
     techTags: ["TypeScript", "Bun", "Redis", "PostgreSQL", "WebSockets", "Docker"],
     liveUrl: "https://exchange.amitesh.work/",
   },
@@ -31,7 +31,7 @@ export const projects: PortfolioProject[] = [
     repo: "my-search-engine",
     title: "Search Engine",
     description:
-      "A small web search engine: submit a URL, it crawls outward from there, builds an inverted index, and lets you search what it found.",
+      "Search engine from scratch: a rate-limited crawler follows links outward from any URL, builds an inverted index (English + Hindi), and ranks results by matched terms.",
     techTags: ["TypeScript", "Bun", "Express", "React"],
   },
   {
@@ -54,7 +54,7 @@ export const projects: PortfolioProject[] = [
     image: "/projects/quickduel.png",
     title: "QuickDuel",
     description:
-      "Real-time multiplayer maths game with Redis matchmaking, BullMQ workers, and server-authoritative WebSocket state.",
+      "Real-time 1v1 maths duel: server-authoritative WebSocket state, Redis locks so only one player can accept a challenge, and BullMQ jobs that end games and settle results.",
     techTags: ["WebSockets", "Redis", "BullMQ", "PostgreSQL", "Next.js"],
     liveUrl: "https://games.amitesh.work/",
   },
@@ -62,8 +62,8 @@ export const projects: PortfolioProject[] = [
     repo: "ai-agent-cli",
     title: "AI Agent CLI",
     description:
-      "A mini Claude Code: terminal coding agent with tool calling, approval gates, persistent memory, and a sandboxed workspace.",
-    techTags: ["TypeScript", "Bun", "OpenAI API", "Gemini API", "E2B"],
+      "A mini Claude Code: terminal coding agent with bash/plan/ask/memory tools, approval gates, auto-summarized sessions, OpenAI/Gemini switching, and voice input.",
+    techTags: ["TypeScript", "Bun", "OpenAI API", "Gemini API", "Whisper"],
   },
   {
     repo: "autocannon-load-testing",

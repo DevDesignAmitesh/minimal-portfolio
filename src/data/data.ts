@@ -34,13 +34,13 @@ export const data = {
       company: "Macro Rides",
       role: "Founding Full Stack Engineer",
       period: "Oct 2024 – Nov 2026",
-      summary: "First engineer at a Delhi EV ride platform. Shipped the product, one-push CI/CD, hired the team.",
+      summary: "First engineer at a Delhi EV ride platform. Wrote the backend and database from scratch, built ring-based driver matching, rebuilt both apps' UI, hired the team.",
     },
     {
       company: "My Design Minds",
       role: "Full Stack Engineer · Contract",
       period: "Apr 2025 – Nov 2025",
-      summary: "Built an AI-driven platform for MSMEs from scratch and led a 2-person team.",
+      summary: "Built NaukriScore from scratch: an agent-loop chat that collects your profile and scores it. Hired and led the engineers and designers.",
     },
   ],
 
